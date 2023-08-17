@@ -1,0 +1,50 @@
+
+.main_nav{
+    padding: 8px;
+    height: 48px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+
+    &__menu{
+        width: 100%;
+        &_button{
+            display: flex;
+            justify-content: flex-end;
+            @media (width > 480px) {
+                display: none;
+            } 
+        }
+        &_list{
+            display: flex;
+            flex-direction: column;
+            padding: 0 20%;
+            list-style: none;
+            text-align: center;
+            width: 50%;
+            background: #fffffe;
+            position: absolute;
+            right: 0;
+            top: 48px;
+            li{
+                padding: 16px 8px;
+            }
+            li:hover{
+                background-color: #ff8e3c;
+                color: #0d0d0d;
+            }
+
+            @media (width > 480px){
+                width: 100%;
+                position: initial;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+        }
+
+
+    }
+    @media (width > 480px) {
+        padding: 0;
+    } 
+}
