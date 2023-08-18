@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  buttonMenu:boolean = true;
+
+  ngOnInit(){
+
+  }
+
+  activeMenu(){
+    this.buttonMenu = !this.buttonMenu;
+  }
+
 }
