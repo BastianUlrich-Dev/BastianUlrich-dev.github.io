@@ -1,0 +1,107 @@
+.main_portada{
+    display: flex;
+    height: 100vh;
+    padding-top: 32px;
+    background-color: #16161a;
+    color: #fffffe;
+    gap: 32px;
+    flex-direction: column;
+    &__info-main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 20%;
+        padding-top: 15%;
+        &__name{
+            width: 60%;
+            h1{
+                font-size: clamp(24px, 3vw, 32px);
+            }
+            p{
+                font-size: clamp(16px, 3vw, 24px);
+            }
+        }
+        &__img{
+            width: 40%;
+            img{
+                filter: drop-shadow(4px 6px 6px black);
+                width: 100%;
+                @media (width > 480px){
+                    width: 80%;
+                }
+            }
+        }
+       
+            
+        @media (width > 480px){
+    
+        }
+    }
+
+
+    &__skill{
+        padding: 0 20%;
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+        &_card{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 16px 24px;
+            height: fit-content;
+            text-align: center;
+            .container_img{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                .imgFilter{
+                    width: 50%;
+                    filter: grayscale(100%);
+                    opacity: 70%;
+                    margin: 0 auto;
+                }
+                .percentage{
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: -26px;
+                    left: 79px;
+                    &--html{
+                        background: #d9376d6e;
+                        border: 3px solid #d9376e;
+                        span{
+                            color: #d9376e;
+                        }
+                    }
+                    &--css{
+                        background: rgb(107 128 0 / 28%);
+                        border: 3px solid #718000;
+                        span{
+                            color: #718000;
+                        }
+                    }
+                    &--typescript{
+                        background: rgb(0 74 128 / 44%);
+                        border: 3px solid #00806e;
+                        span{
+                            color: #00806e;
+                        }
+                    }
+                    &--angular{
+                        background: #d937376e;
+                        border: 3px solid #d93737;
+                        span{
+                            color: #d93737;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
