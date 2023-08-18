@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: monospace;
     margin: 0;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #eff0f3;
+    background-color: #16161a;
+}
+
+p, span{
+    color: #94a1b2
 }
 
