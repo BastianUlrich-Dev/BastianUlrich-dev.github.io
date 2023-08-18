@@ -2,7 +2,7 @@
 .main_nav{
     padding: 8px;
     height: 48px;
-    background-color: transparent;
+    background-color: #fffffe;
     display: flex;
     justify-content: flex-end;
 
@@ -16,9 +16,9 @@
             } 
         }
         &_list{
-            display: flex;
+            padding: 0;
+            display: none;
             flex-direction: column;
-            padding: 0 20%;
             list-style: none;
             text-align: center;
             width: 50%;
@@ -30,16 +30,22 @@
                 padding: 16px 8px;
             }
             li:hover{
-                background-color: #ff8e3c;
-                color: #0d0d0d;
+                background-color: #ff8906;
+                color: #fffffe;
             }
 
             @media (width > 480px){
                 width: 100%;
+                display: flex;
                 position: initial;
                 flex-direction: row;
                 justify-content: flex-end;
+                padding: 0 20%;
+                
             }
+        }
+        &_list--active{
+            display: flex;
         }
 
 
