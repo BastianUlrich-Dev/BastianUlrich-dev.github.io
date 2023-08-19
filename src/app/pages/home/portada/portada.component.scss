@@ -5,24 +5,29 @@
     color: #fffffe;
     gap: 32px;
     flex-direction: column;
-   
+    
+    .title-margin-top{
+        margin-top: 46px;
+    }
     &__info-main{
         display: flex;
         flex-direction: row;
         align-items: center;
         padding: 0 20%;
-        padding-top: 100px;
+        padding-top: 70px;
         &__name{
             width: 60%;
             h1{
-                font-size: clamp(24px, 3vw, 32px);
+                font-size: clamp(32px, 3vw, 34px);
             }
             p{
-                font-size: clamp(16px, 3vw, 24px);
+                font-size: clamp(24px, 3vw, 32x);
             }
         }
         &__img{
-            width: 40%;
+            width: 70%;
+            position: relative;
+            text-align: center;
             img{
                 filter: drop-shadow(4px 6px 6px black);
                 width: 100%;
@@ -121,5 +126,26 @@
             justify-content: center;
         }
     }
-
+    .container-saludo{
+        padding: 0 5%;
+        .saludo{
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+          }
+          @media (width> 905px) {
+            padding: 0 16%;
+          }
+    }
 }
