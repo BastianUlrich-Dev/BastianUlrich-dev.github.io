@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class PortadaComponent {
 
   imgProfile:string = "../../../assets/img/imgprofile.png";
-  imgAngular:string = "../../../assets/img/angular.png"
-  imgTypescript:string = "../../../assets/img/typescript.png"
-  imgCss:string = "../../../assets/img/css3.png"
-  imgHtml:string = "../../../assets/img/html.png"
+  imgAngular:string = "../../../assets/img/angular.png";
+  imgTypescript:string = "../../../assets/img/typescript.png";
+  imgCss:string = "../../../assets/img/css3.png";
+  imgHtml:string = "../../../assets/img/html.png";
 }
