@@ -1,0 +1,39 @@
+h2{
+    color: #fffffe;
+}
+
+.main_experiencia__container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%;
+    margin: 32px 0;
+    gap: 32px;
+    p{
+        color: #fffffe;
+    }
+    &_card{
+        padding: 24px;
+        width: 100%;
+        @media (width > 480px) {
+            width: 45%;
+            // height: fit-content;
+            // flex-basis: calc(50% - 10px);
+            // margin: 5px;
+        }
+    }
+    &_card:nth-child(1){
+        background-color: #7f5af0;
+    }
+    &_card:nth-child(2){
+        background-color: #2cb67d;
+    }
+    &_card:nth-child(3){
+        background-color: #94a1b2;
+    }
+
+    @media (width > 480px){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
