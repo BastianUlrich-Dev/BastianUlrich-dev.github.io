@@ -12,4 +12,5 @@ export class PortadaComponent {
   imgTypescript:string = "../../../assets/img/typescript.png";
   imgCss:string = "../../../assets/img/css3.png";
   imgHtml:string = "../../../assets/img/html.png";
+  imgTest:string = "test";
 }
