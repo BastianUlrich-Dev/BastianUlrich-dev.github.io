@@ -1,11 +1,11 @@
 <nav class="main_nav">
     <section class="main_nav__menu">
-        <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
-        <ul [ngClass]="{'main_nav__menu_list--active': !buttonMenu}" class="main_nav__menu_list">
-            <li>Inicio</li>
-            <li>Quién soy</li>
-            <li>Experiencia</li>
-            <li>Mis proyectos</li>
-        </ul>
     </section>
+    <ul [ngClass]="{'main_nav__menu_list--active': !buttonMenu}" class="main_nav__menu_list">
+        <li>Inicio</li>
+        <li>Quién soy</li>
+        <li>Experiencia</li>
+        <li>Mis proyectos</li>
+    </ul>
+    <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
 </nav>
