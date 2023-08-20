@@ -62,12 +62,16 @@
             .container_img{
                 position: relative;
                 display: flex;
+                margin: 0 auto;
                 flex-direction: column;
                 .imgFilter{
                     width: 75%;
                     filter: grayscale(100%);
                     opacity: 70%;
                     margin: 0 auto;
+                    @media (width > 480px){
+                        width: 85px
+                    }
                 }
                 .percentage{
                     width: 50px;
@@ -111,13 +115,14 @@
                         position: initial;
                         margin: 0 auto;
                         scale: 1.5;
-                        margin-top: 15px;
+                        margin: -18px 0 0 52px;
                     }
                 }
             }
             @media (width > 480px) {
-                flex-basis: calc(49% - 10px);
                 margin: 3px;
+                height: 300px;
+                width: 45%;
             }
         }
         @media (width > 480px) {
