@@ -1,10 +1,12 @@
 h2{
     color: #fffffe;
 }
+.title--margin-top{
+    margin-top: 56px;
+}
 .main_proyects__container{
     display: flex;
     flex-direction: column;
-    padding: 0 20%;
     margin: 32px 0 40px;
     gap: 32px;
     p{
@@ -52,6 +54,7 @@ h2{
     @media (width > 480px){
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 0 20%;
     }
 }
 
