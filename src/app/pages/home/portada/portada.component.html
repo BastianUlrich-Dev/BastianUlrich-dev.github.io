@@ -14,58 +14,17 @@
 
     <h1 class="title title-margin-top">SKILLS</h1>
     <section id="componenteSkill" class="main_portada__skill">
-        <article class="main_portada__skill_card">
+        <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
             <div class="container_img">
-                <img class="imgFilter" src="{{imgHtml}}" alt="">
-                <div class="percentage percentage--html">
-                    <span>85%</span>
+                <img class="imgFilter" src="{{item.img}}" alt="">
+                <div class="percentage percentage--{{item.title}}">
+                    <span>{{item.percentage}}</span>
                 </div>
             </div>
             <div class="container_description">
-                <h2>HTML</h2>
-                <p>Semantico y con accesibilidad.</p>
+                <h2>{{item.title | uppercase}}</h2>
+                <p>{{item.description}}.</p>
             </div>
         </article>
-
-        <article class="main_portada__skill_card">
-            <div class="container_img">
-                <img class="imgFilter" src="{{imgCss}}" alt="">
-                <div class="percentage percentage--css">
-                    <span>85%</span>
-                </div>
-            </div>
-            <div class="container_description">
-                <h2>CSS</h2>
-                <p>Metodologia BEM y enfoque mobile first</p>
-            </div>
-        </article>
-
-        <article class="main_portada__skill_card">
-            <div class="container_img">
-                <img class="imgFilter" src="{{imgTypescript}}" alt="">
-                <div class="percentage percentage--typescript">
-                    <span>67%</span>
-                </div>
-            </div>
-            <div class="container_description">
-                <h2>Typescript</h2>
-                <p>Buenas practicas y usos de nuevas características</p>
-            </div>
-        </article>
-
-        <article class="main_portada__skill_card">
-            <div class="container_img">
-                <img class="imgFilter" src="{{imgAngular}}" alt="">
-                <div class="percentage percentage--angular">
-                    <span>60%</span>
-                </div>
-            </div>
-            <div class="container_description">
-                <h2>Angular</h2>
-                <p>Maquetacion y creacion de proyectos reactivos y con enrutamiento.</p>
-            </div>
-        </article>
-
     </section>
-
 </article>

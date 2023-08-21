@@ -8,13 +8,18 @@ import { Component } from '@angular/core';
 export class NavComponent {
 
   buttonMenu:boolean = true;
+  modalActive:boolean = false;
 
   ngOnInit(){
-
   }
 
   activeMenu(){
     this.buttonMenu = !this.buttonMenu;
+  }
+
+  toggleModal(){
+    this.buttonMenu = true;
+    this.modalActive = !this.modalActive;
   }
 
 }

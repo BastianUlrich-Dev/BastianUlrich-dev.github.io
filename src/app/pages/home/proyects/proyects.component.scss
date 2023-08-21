@@ -1,60 +1,60 @@
-h2{
+h2 {
     color: #fffffe;
+    margin-top: 8px;
 }
-.title--margin-top{
+
+.title--margin-top {
     margin-top: 56px;
 }
-.main_proyects__container{
+
+.main_proyects__container {
     display: flex;
     flex-direction: column;
     margin: 32px 0 40px;
     gap: 32px;
-    p{
+
+    p {
         color: #fffffe;
     }
-    &_card{
-        position: relative;
-        overflow: hidden;
-        max-height: 336px;
+
+    &_card {
         padding: 24px;
         width: 100%;
-        min-height: 200px;
+
+        .container_img {
+            width: 100%;
+            height: 206px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
         @media (width > 480px) {
             width: 45%;
         }
-        .divImg{
-            width: -webkit-fill-available;
-            z-index: -1;
-            top: 0;
-            filter: blur(5px);
-            -webkit-filter: blur(5px);
-            -moz-filter: blur(5px);
-            -o-filter: blur(5px);
-            left: 0;
-            position: absolute;
-            height: 200px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            &--01{
-                background-image: url(../../../../assets/img/patron1.png);
-            }
-            &--02{
-                background-image: url(../../../../assets/img/patron2.png);
-            }
-            &--03{
-                background-image: url(../../../../assets/img/patron3.png);
-            }
-            &--04{
-                background-image: url(../../../../assets/img/patron4.png);
-            }
-        }
     }
 
-    @media (width > 480px){
+    &_card:nth-child(1) {
+        background-color: #7f5af0;
+    }
+
+    &_card:nth-child(2) {
+        background-color: #2cb67d;
+    }
+
+    &_card:nth-child(3) {
+        background-color: #94a1b2;
+    }
+
+    &_card:nth-child(4) {
+        background-color: #72757e;
+    }
+
+    @media (width > 480px) {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0 20%;
     }
 }
-
