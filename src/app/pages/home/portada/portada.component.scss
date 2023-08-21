@@ -21,7 +21,7 @@
                 font-size: clamp(32px, 3vw, 34px);
             }
             p{
-                font-size: clamp(24px, 3vw, 32x);
+                font-size: clamp(24px, 3vw, 32px);
             }
             button{
                 background-color: #7f5af0;
@@ -58,6 +58,7 @@
             }
         }
     }
+    // skills emigrar a otro componente!
 
     h1, h2{
         font-size: clamp(1.5rem, 3vw, 2rem);
@@ -66,7 +67,6 @@
         font-size: clamp(12px, 3vw, 24px); 
     }
 
-    // skills emigrar a otro componente!
     &__skill{
         padding: 0 20%;
         gap: 24px;
