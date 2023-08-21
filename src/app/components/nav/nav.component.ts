@@ -27,7 +27,7 @@ export class NavComponent {
   abrirModal(){
     this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);
     this.isOpen = !this.isOpen;
-    console.log("desde el nav");
+    this.buttonMenu = true;
     
   }
   cerrarModal(rta: boolean){
