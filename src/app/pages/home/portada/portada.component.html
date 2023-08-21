@@ -1,8 +1,9 @@
-<article class="main_portada">
+<article id="idPortada" class="main_portada">
     <section class="main_portada__info-main">
         <article class="main_portada__info-main__name">
             <h1>Bastian Ulrich</h1>
             <p>Desarrollador web y Diseñador UX/UI.</p>
+            <button>Mas detalles</button>
         </article>
         <article class="main_portada__info-main__img">
             <img src="{{imgProfile}}" alt="">
@@ -12,8 +13,8 @@
         </article>
     </section>
 
-    <h1 class="title title-margin-top">SKILLS</h1>
-    <section id="componenteSkill" class="main_portada__skill">
+    <h1 id="idSkills" class="title title-margin-top">SKILLS</h1>
+    <section class="main_portada__skill">
         <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
             <div class="container_img">
                 <img class="imgFilter" src="{{item.img}}" alt="">
