@@ -1,9 +1,9 @@
 <article id="idPortada" class="main_portada">
     <section class="main_portada__info-main">
         <article class="main_portada__info-main__name">
-            <h1>Bastian Ulrich</h1>
-            <p>Desarrollador web y Diseñador UX/UI.</p>
-            <button>Mas detalles</button>
+            <h1 class="main_portada__info-main__name_title">Bastian Ulrich</h1>
+            <p class="main_portada__info-main__name_subtitle">Desarrollador web y Diseñador UX/UI.</p>
+            <button class="main_portada__info-main__name_button" (click)="abrirModal()">Mas detalles</button>
         </article>
         <article class="main_portada__info-main__img">
             <img src="{{imgProfile}}" alt="">
@@ -13,3 +13,7 @@
         </article>
     </section>
 </article>
+<section *ngIf="isOpen">
+    <app-modal (closeModal)="cerrarModal($event)" [title]="titleModal" [description]="descriptionModal" [isOpen]="isOpen"></app-modal>
+</section>
+

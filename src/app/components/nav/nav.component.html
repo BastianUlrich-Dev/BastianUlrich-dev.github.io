@@ -6,15 +6,10 @@
         <a href="#idSkills">Skills</a>
         <a href="#idExperiencia">Experiencia</a>
         <a href="#idProyects">Mis proyectos</a>
-        <a (click)="toggleModal()" class="main_nav__menu_list--animation">Informacion de la web</a>
+        <a (click)="abrirModal()" class="main_nav__menu_list--animation">Informacion de la web</a>
     </article>
     <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
-    
-    <section [ngClass]="{'container_modal--active': modalActive}" class="container_modal">
-        <article class="modal">
-            <span (click)="toggleModal()" class="modal_close material-symbols-outlined">close</span>
-            <h1>Informacion importante</h1>
-            <p>Este sitio web esta diseñado como portafolio con proyectos basicos. Cabe destacar que se esta utilizando framework Angular sin ningun framework de diseño. </p>
-        </article>
-    </section>
 </nav>
+<section *ngIf="isOpen">
+    <app-modal (closeModal)="cerrarModal($event)" [title]="titleModal" [description]="descriptionModal" [isOpen]="isOpen"></app-modal>
+</section>

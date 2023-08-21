@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -8,18 +8,29 @@ import { Component } from '@angular/core';
 export class NavComponent {
 
   buttonMenu:boolean = true;
-  modalActive:boolean = false;
+  modal: ModalComponent;
 
-  ngOnInit(){
+  titleModal: string = "Informacion importante";
+  descriptionModal: string = "Este sitio web esta diseñado como portafolio con proyectos basicos. Cabe destacar que se esta utilizando framework Angular sin ningun framework de diseño";
+  isOpen: boolean = false;
+
+
+  constructor() {
+    this.modal = new ModalComponent();
   }
-
+  
   activeMenu(){
     this.buttonMenu = !this.buttonMenu;
   }
 
-  toggleModal(){
-    this.buttonMenu = true;
-    this.modalActive = !this.modalActive;
+  // MEDETODOS PARA EL MODAL
+  abrirModal(){
+    this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);
+    this.isOpen = !this.isOpen;
+    console.log("desde el nav");
+    
   }
-
+  cerrarModal(rta: boolean){
+    this.isOpen = rta;
+  }
 }

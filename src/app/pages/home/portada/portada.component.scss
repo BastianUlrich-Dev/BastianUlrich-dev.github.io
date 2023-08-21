@@ -17,13 +17,13 @@
         padding-top: 70px;
         &__name{
             width: 60%;
-            h1{
-                font-size: clamp(32px, 3vw, 34px);
+            &_title{
+                font-size: clamp(1.5rem, 3vw, 2rem);
             }
-            p{
-                font-size: clamp(24px, 3vw, 32px);
+            &_subtitle{
+                font-size: clamp(12px, 3vw, 24px);
             }
-            button{
+            &_button{
                 background-color: #7f5af0;
                 border: none;
                 border-radius: 16px;
@@ -36,7 +36,7 @@
                     width: 50%;
                 }
             }
-            button:hover{
+            &_button:hover{
                 animation: zoom 2s infinite;
             }
             @keyframes zoom {
@@ -81,46 +81,4 @@
             padding: 0 16%;
           }
     }
-}
-.container_modal{
-    background-color: rgb(0 0 0);
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    transition: opacity 0.3s ease-in-out;
-    display: none;
-    .modal{
-        height: auto;
-        background-color: #7f5af0;
-        position: fixed;
-        align-content: center;
-        margin: 0 16%;
-        padding: 24px;
-        top: 20%;
-
-        span{
-            color: white;
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin: 8px;
-            cursor: pointer;
-        }
-        h1{
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-        }
-        h1, p{
-            color: #fffffe;
-        }
-        @media (width > 480px){
-            top: 30%;
-        }
-    }
-&--active{
-    display: initial;
-    overflow: hidden;
-}
-
-  
 }
