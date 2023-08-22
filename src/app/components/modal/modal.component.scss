@@ -33,6 +33,10 @@
         @media (width > 480px){
             top: 30%;
         }
+        &__description{
+            overflow: auto;
+            max-height: 200px;
+        }
     }
 
   
