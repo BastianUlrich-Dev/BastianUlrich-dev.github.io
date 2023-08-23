@@ -1,2 +1,36 @@
-<p>proyecto01 works!</p>
+
 <a routerLink="" style="position: absolute; top: 134px;">ir al home</a>
+<section class="main_proyecto01">
+  <form>
+    <section class="main_proyecto01__container">
+      <article class="main_proyecto01__container_row">
+        <label for="">DAY</label>
+        <input type="number" id="day" formControlName="day">
+      </article>
+  
+      <article class="main_proyecto01__container_row">
+        <label for="">MONTH</label>
+        <input type="text" id="month" formControlName="month">
+      </article>
+  
+      <article class="main_proyecto01__container_row">
+        <label for="">YEAR</label>
+        <input type="text" id="year" formControlName="year">
+      </article>
+    </section>
+
+    <section class="container_button">
+      <hr>
+      <button> <img src="../../../assets/img/icon-arrow.svg" alt=""></button>
+    </section>
+
+  </form>
+  <section class="container_result">
+    <p>--<span>years</span></p>
+    <p>--<span>months</span></p>
+    <p>--<span>days</span></p>
+  </section>
+</section>
+
+
+
