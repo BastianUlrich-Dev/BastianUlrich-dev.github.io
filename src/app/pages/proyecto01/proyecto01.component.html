@@ -1,36 +1,55 @@
-
-<a routerLink="" style="position: absolute; top: 134px;">ir al home</a>
-<section class="main_proyecto01">
-  <form>
-    <section class="main_proyecto01__container">
-      <article class="main_proyecto01__container_row">
-        <label for="">DAY</label>
-        <input type="text" id="day" formControlName="day">
-      </article>
+<section class="main_proyect">
+  <section class="main_proyecto01">
+    <form (ngSubmit)="onSubmit()" [formGroup]="calculatorForm">
+      <section class="main_proyecto01__container">
+        <article class="main_proyecto01__container_row">
+          <label for="">DAY</label>
+          <input placeholder="DD" type="number" id="day" formControlName="day" min="1" max="31">
+          <div class="error" *ngIf="calculatorForm.get('day')?.touched && calculatorForm.get('day')?.errors?.['required']">
+            <h1>Este campo es requerido.</h1>
+          </div>
+          <div class="error" *ngIf="calculatorForm.get('day')?.touched && calculatorForm.get('day')?.errors?.['max']">
+            <h1>Ingresa un día valido</h1>
+          </div>
+        </article>
+    
+        <article class="main_proyecto01__container_row">
+          <label for="">MONTH</label>
+          <input placeholder="MM" type="number" id="month" formControlName="month" min="1" max="12">
+          <div class="error" *ngIf="calculatorForm.get('month')?.touched && calculatorForm.get('month')?.errors?.['required']">
+            <h1>Este campo es requerido.</h1>
+          </div>
+          <div class="error" *ngIf="calculatorForm.get('month')?.touched && calculatorForm.get('month')?.errors?.['max']">
+            <h1>Ingresa un mes valido</h1>
+          </div>
+        </article>
+    
+        <article class="main_proyecto01__container_row">
+          <label for="">YEAR</label>
+          <input placeholder="YYYY"  type="number" id="year" formControlName="year" min="1900" max={{fechaACtual}}>
+          <div class="error" *ngIf="calculatorForm.get('year')?.touched && calculatorForm.get('year')?.errors?.['required']">
+            <h1>Este campo es requerido.</h1>
+          </div>
+          <div class="error" *ngIf="calculatorForm.get('year')?.touched && calculatorForm.get('year')?.errors?.['max']">
+            <h1>Debe ser una fecha en el pasado</h1>
+          </div>
+          <div class="error" *ngIf="calculatorForm.get('year')?.touched && calculatorForm.get('year')?.errors?.['min']">
+            <h1>Ingresa una fecha no inferior a 1900</h1>
+          </div>
+        </article>
+      </section>
   
-      <article class="main_proyecto01__container_row">
-        <label for="">MONTH</label>
-        <input type="text" id="month" formControlName="month">
-      </article>
-  
-      <article class="main_proyecto01__container_row">
-        <label for="">YEAR</label>
-        <input type="text" id="year" formControlName="year">
-      </article>
+      <section class="container_button">
+        <hr>
+        <button [disabled]="calculatorForm.invalid"> <img src="../../../assets/img/icon-arrow.svg" alt="" ></button>
+      </section>
+    </form>
+   
+    <section class="container_result">
+      <p>{{edadYear}}<span> years</span></p>
+      <p>{{edadMeses}}<span> months</span></p>
+      <p>{{edadDias}}<span> days</span></p>
     </section>
-
-    <section class="container_button">
-      <hr>
-      <button> <img src="../../../assets/img/icon-arrow.svg" alt=""></button>
-    </section>
-
-  </form>
-  <section class="container_result">
-    <p>--<span> years</span></p>
-    <p>--<span> months</span></p>
-    <p>--<span> days</span></p>
   </section>
+  <a routerLink="" class="link_back">Volver al home</a>
 </section>
-
-
-

@@ -10,8 +10,8 @@ export class NavComponent {
   buttonMenu:boolean = true;
   modal: ModalComponent;
 
-  titleModal: string = "Informacion importante";
-  descriptionModal: string = "Este sitio web esta diseñado como portafolio con proyectos basicos. Cabe destacar que se esta utilizando framework Angular sin ningun framework de diseño";
+  titleModal: string = "Información importante";
+  descriptionModal: string = "Este sitio web está diseñado como portafolio con proyectos básicos. se está utilizando framework Angular 16 sin ningún framework de diseño. Cabe destacar que estaré en constante actualización";
   isOpen: boolean = false;
 
 

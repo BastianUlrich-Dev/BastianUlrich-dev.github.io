@@ -1,35 +1,55 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-proyecto01',
   templateUrl: './proyecto01.component.html',
   styleUrls: ['./proyecto01.component.scss']
 })
 export class Proyecto01Component {
-  ageForm: FormGroup;
-  // formulario: FormGroup;
+  calculatorForm!: FormGroup;
+  dia: number = 0;
+  mes: number = 0;
+  year: number = 0;
+  edadYear: number = 0;
+  edadMeses: number = 0;
+  edadDias: number = 0;
+  fechaACtual: number = new Date().getFullYear();
 
-  constructor(private fb: FormBuilder) {
-    this.ageForm = this.fb.group({
-      birthdate: [''],
-      day: [''],
-      month: ['']
-    });
+  constructor(private readonly fb: FormBuilder) {
+  }
+
+  ngOnInit(): void {
+    this.calculatorForm = this.initForm();
   }
 
   onSubmit() {
-    const birthdate = new Date(this.ageForm.value.birthdate);
-    const today = new Date();
-    const ageInMilliseconds = today.getTime() - birthdate.getTime();
-    const ageInYears = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365));
-    const ageInMonths = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 30));
-    const ageInDays = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24));
+    if(this.calculatorForm.valid){
+      console.log('form ->', this.calculatorForm.value);
+      
+      const today = new Date();
+      const birthdate = new Date(this.calculatorForm.value.year, this.calculatorForm.value.month - 1, this.calculatorForm.value.day);
+      const ageInMilliseconds = today.getTime() - birthdate.getTime();
+      const ageDate = new Date(ageInMilliseconds);
 
-    const day = this.ageForm.value.day;
-    const month = this.ageForm.value.month;
+      this.dia = this.calculatorForm.value.day;
+      this.mes = this.calculatorForm.value.month;
+      this.year = this.calculatorForm.value.year;
 
-    alert(`Age: ${ageInYears} years, ${ageInMonths} months, ${ageInDays} days`);
-    alert(`Day: ${day}`);
-    alert(`Month: ${month}`);
+      this.edadYear = Math.abs(ageDate.getUTCFullYear() - 1970);
+      this.edadMeses = ageDate.getUTCMonth();
+      this.edadDias = ageDate.getUTCDate();
+
+    }
+    
+  }
+
+  initForm():FormGroup{
+    // declarar propiedades de nuestro formulario con validaciones.
+    return this.fb.group({
+      day:['', [Validators.required, Validators.min(1), Validators.max(31)]],
+      month:['', [Validators.required, Validators.min(1), Validators.max(12)]],
+      year:['', [Validators.required, Validators.min(1900), Validators.max(new Date().getUTCFullYear())]],
+
+    })
   }
 }

@@ -11,13 +11,13 @@ export class SkillsComponent {
       img: "../../../assets/img/html.png",
       percentage: "90%",
       title: "html",
-      description: "Semantico y con accesibilidad"
+      description: "Semántico y con accesibilidad"
     },
     {
       img: "../../../assets/img/css3.png",
       percentage: "85%",
       title: "css",
-      description: "Metodologia BEM y enfoque mobile first"
+      description: "Metodología BEM y enfoque mobile first"
     },
     {
       img: "../../../assets/img/typescript.png",
@@ -29,7 +29,7 @@ export class SkillsComponent {
       img: "../../../assets/img/angular.png",
       percentage: "70%",
       title: "angular",
-      description: "Maquetacion y creacion de proyectos reactivos y con enrutamiento"
+      description: "Maquetación y creación  de proyectos reactivos y con enrutamiento"
     },
   ]
   imgProfile:string = "../../../assets/img/imgprofile.png";
