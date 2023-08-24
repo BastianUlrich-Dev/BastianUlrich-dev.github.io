@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ProyectsComponent {
   proyectsObj = [
     {
-      img: "../../../../assets/img/patron1.png",
+      img: "../../../../assets/img/captura-proyect-01.png",
       title: "Proyecto calculadora de edad",
       subtitle: "",
       description: "Proyecto calculador de edad, meses y días responsivo con formulario reactivo.",
