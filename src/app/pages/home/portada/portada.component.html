@@ -2,16 +2,16 @@
     <section class="main_portada__info-main">
         <article class="main_portada__info-main__name">
             <h1 class="main_portada__info-main__name_title">Bastian Ulrich</h1>
-            <p class="main_portada__info-main__name_subtitle">Desarrollador web y Diseñador UX/UI.</p>
-            <button class="main_portada__info-main__name_button" (click)="abrirModal()">Mas detalles</button>
+            <p class="main_portada__info-main__name_subtitle">Desarrollador Web <br> y Diseñador UX/UI.</p>
+            <!-- <button class="main_portada__info-main__name_button" (click)="abrirModal()">Mas detalles</button> -->
         </article>
         <article class="main_portada__info-main__img">
             <img src="{{imgProfile}}" alt="">
-            <div class="container-saludo">
-                <p class="saludo">Hello world!</p>
-            </div>
         </article>
     </section>
+    <div class="container-saludo">
+        <p class="saludo">Hello world!</p>
+    </div>
 </article>
 <section *ngIf="isOpen">
     <app-modal (closeModal)="cerrarModal($event)" [title]="titleModal" [description]="descriptionModal" [isOpen]="isOpen"></app-modal>

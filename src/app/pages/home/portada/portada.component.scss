@@ -3,7 +3,7 @@
     padding-top: 32px;
     background-color: #16161a;
     color: #fffffe;
-    gap: 32px;
+    gap: 8px;
     flex-direction: column;
     
     .title-margin-top{
@@ -13,8 +13,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 20%;
-        padding-top: 70px;
+        padding: 70px 10% 0 10%;
         &__name{
             width: 60%;
             &_title{
@@ -46,7 +45,7 @@
               }
         }
         &__img{
-            width: 70%;
+            width: 80%;
             position: relative;
             text-align: center;
             img{
@@ -57,17 +56,23 @@
                 }
             }
         }
+        @media (width > 480px){
+            padding: 70px 20% 0 20%;
+        }
     }
 
     .container-saludo{
         padding: 0 5%;
         .saludo{
+            font-size: 1.5rem;
+            max-width: 166px;
+            width: 100%;
             overflow: hidden;
             border-right: .15em solid orange;
             white-space: nowrap;
             margin: 0 auto;
             letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            animation: typing 5.5s steps(90, end), blink-caret .75s step-end infinite;
         }
         @keyframes typing {
             from { width: 0 }

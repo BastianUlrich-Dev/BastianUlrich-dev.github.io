@@ -1,22 +1,28 @@
-h2{
-    color: #fffffe;
+.title{
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .title--margin-top{
     margin-top: 24px;
 }
 .main_experiencia__container{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     margin: 32px 0 0;
     gap: 32px;
-    p{
-        color: #fffffe;
-    }
     &_card{
         padding: 24px;
         width: 100%;
         @media (width > 480px) {
             width: 45%;
+        }
+        &__title{
+            color: #fffffe;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        &__subtitle, &__description{
+            color: #fffffe;
+            font-size: clamp(0.8125rem, 3vw, 1.5rem);
         }
     }
     &_card:nth-child(1){
@@ -27,6 +33,9 @@ h2{
     }
     &_card:nth-child(3){
         background-color: #94a1b2;
+    }
+    &_card:last-child{
+        padding: 0;
     }
 
     @media (width > 480px){

@@ -22,5 +22,10 @@ export class ExperienciaComponent {
       company: "CIGSA",
       description: "Responsable de analizar, desarrollar y ejecutar soluciones de programación con lenguaje PHP, JavaScript, Html, CSS, Mysql y Bootstrap para cumplir con las necesidades de los clientes. Además, realización de trabajos administrativos en el área de informática, mantenimiento y soporte de servicios"
     },
+    {
+      title: "",
+      company: "",
+      description: ""
+    },
   ]
 }
