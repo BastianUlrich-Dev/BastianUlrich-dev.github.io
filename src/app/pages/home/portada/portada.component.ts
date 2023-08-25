@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
@@ -22,8 +22,8 @@ export class PortadaComponent {
   organizado lo que facilita la labor`;
   isOpen: boolean = false;
   
-  constructor() {
-    this.modal = new ModalComponent();
+  constructor(private renderer: Renderer2) {
+    this.modal = new ModalComponent(this.renderer);
   }
 
     // MEDETODOS PARA EL MODAL

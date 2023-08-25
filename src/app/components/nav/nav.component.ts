@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2  } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-nav',
@@ -14,9 +14,8 @@ export class NavComponent {
   descriptionModal: string = "Este sitio web está diseñado como portafolio con proyectos básicos. se está utilizando framework Angular 16 sin ningún framework de diseño. Cabe destacar que estará en constante actualización";
   isOpen: boolean = false;
 
-
-  constructor() {
-    this.modal = new ModalComponent();
+  constructor(private renderer: Renderer2) {
+    this.modal = new ModalComponent(this.renderer);
   }
   
   activeMenu(){
@@ -28,7 +27,7 @@ export class NavComponent {
     this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);
     this.isOpen = !this.isOpen;
     this.buttonMenu = true;
-    
+    this.renderer.setStyle(document.body, 'overflow', 'hidden');
   }
   cerrarModal(rta: boolean){
     this.isOpen = rta;
