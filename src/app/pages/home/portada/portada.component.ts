@@ -1,5 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { ComuniacionService } from 'src/app/services/comuniacion.service';
 
 @Component({
   selector: 'app-portada',
@@ -7,6 +8,7 @@ import { ModalComponent } from 'src/app/components/modal/modal.component';
   styleUrls: ['./portada.component.scss']
 })
 export class PortadaComponent {
+  changeClase: boolean = false;
   imgProfile:string = "../../../assets/img/imgprofile.png";
   modal: ModalComponent;
   titleModal: string = "Informacion personal";
@@ -22,10 +24,16 @@ export class PortadaComponent {
   organizado lo que facilita la labor`;
   isOpen: boolean = false;
   
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, private comunicacionService : ComuniacionService) {
     this.modal = new ModalComponent(this.renderer);
   }
-
+  ngOnInit(): void {
+    this.comunicacionService.clase$.subscribe(clase =>{
+      this.changeClase = clase;
+      console.log(this.changeClase );
+      
+    })
+  }
     // MEDETODOS PARA EL MODAL
     abrirModal(){
       this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);

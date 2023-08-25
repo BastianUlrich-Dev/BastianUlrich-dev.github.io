@@ -10,6 +10,7 @@
     flex-direction: column;
     margin: 32px 0 0;
     gap: 32px;
+
     &_card{
         padding: 24px;
         width: 100%;
@@ -24,6 +25,15 @@
             color: #fffffe;
             font-size: clamp(0.8125rem, 3vw, 1.5rem);
         }
+    }
+    &_cardContrast{
+        letter-spacing: 1px !important;
+        line-height: 24px !important;
+        background-color: black !important;
+        border: 1px solid white !important;
+    }
+    &_cardContrast:last-child{
+        border: none !important;
     }
     &_card:nth-child(1){
         background-color: #7f5af0;

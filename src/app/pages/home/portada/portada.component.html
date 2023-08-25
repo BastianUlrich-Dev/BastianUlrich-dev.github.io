@@ -1,11 +1,11 @@
-<article id="idPortada" class="main_portada">
+<article id="idPortada" [ngClass]="{'main_portadaContrast': changeClase}" class="main_portada">
     <section class="main_portada__info-main">
         <article class="main_portada__info-main__name">
             <h1 class="main_portada__info-main__name_title">Bastian Ulrich</h1>
             <p class="main_portada__info-main__name_subtitle">Desarrollador Web <br> y Diseñador UX/UI.</p>
             <!-- <button class="main_portada__info-main__name_button" (click)="abrirModal()">Mas detalles</button> -->
         </article>
-        <article class="main_portada__info-main__img">
+        <article [ngClass]="{'main_portada__info-main__imgContrast': changeClase}" class="main_portada__info-main__img">
             <img src="{{imgProfile}}" alt="">
         </article>
     </section>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { ComuniacionService } from 'src/app/services/comuniacion.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -6,6 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./experiencia.component.scss']
 })
 export class ExperienciaComponent {
+
+  changeClase: boolean = false;
+
+  constructor(private comunicacionService : ComuniacionService){}
+
+  ngOnInit(): void {
+    this.comunicacionService.clase$.subscribe(clase =>{
+      this.changeClase = clase;
+      console.log(this.changeClase );
+      
+    })
+  }
   experienciaObj = [
     {
       title: "DISEÑADOR UX/UI",
@@ -28,4 +41,6 @@ export class ExperienciaComponent {
       description: ""
     },
   ]
+
+
 }

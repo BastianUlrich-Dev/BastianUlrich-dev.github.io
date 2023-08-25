@@ -14,7 +14,19 @@
         backdrop-filter: blur(10px);
         border: 2px solid rgba(255,255,255,.01);
         box-shadow: 0 0 40px #08071000;
-
+        &_contrast{
+                position: absolute;
+                color: white;
+                left: 0;
+                height: 30px;
+                cursor: pointer;
+                display: flex;
+                margin: 8px 0 8px 15%;
+                width: 30px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+        }
         &_button{
             cursor: pointer;
             width: 25px;
@@ -75,11 +87,22 @@
         &_list--active{
             display: flex;
         }
+        &_list--activeContrast{
+            background-color: black;
+            border: 1px solid white;
+        }
 
         @media (width > 480px) {
             width: 0;
         } 
 
+    }
+    .menu_contrast{
+        background-color: black;
+        border: 1px solid white;
+        @media (width> 480px) {
+            border: none;
+        }
     }
     @media (width > 480px) {
         padding: 0;

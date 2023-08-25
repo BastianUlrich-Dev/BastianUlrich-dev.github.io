@@ -1,5 +1,7 @@
 import { Component, Renderer2  } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
+import { ComuniacionService } from 'src/app/services/comuniacion.service';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -8,18 +10,39 @@ import { ModalComponent } from '../modal/modal.component';
 export class NavComponent {
 
   buttonMenu:boolean = true;
+  buttonContrast: boolean = true;
+  toggleChangeClass: boolean = true;
+  navContrast: boolean = true;
   modal: ModalComponent;
 
   titleModal: string = "Información importante";
   descriptionModal: string = "Este sitio web está diseñado como portafolio con proyectos básicos. se está utilizando framework Angular 16 sin ningún framework de diseño. Cabe destacar que estará en constante actualización";
   isOpen: boolean = false;
 
-  constructor(private renderer: Renderer2) {
-    this.modal = new ModalComponent(this.renderer);
+  constructor(private renderer: Renderer2, private comunicacionService: ComuniacionService) {
+   this.modal = new ModalComponent(this.renderer);
   }
-  
+
   activeMenu(){
     this.buttonMenu = !this.buttonMenu;
+  }
+  activeContrast(){
+    this.buttonContrast = !this.buttonContrast;
+    this.navContrast = !this.navContrast;
+    this.changeContrast();
+
+  }
+  changeContrast(){
+    if (!this.buttonContrast) {
+      // this.renderer.setStyle(document.body, 'filter', 'grayscale(1)');
+      this.renderer.setStyle(document.body, 'background-color', 'black');
+      this.comunicacionService.cambiarClase(true)
+    }else{
+      // this.renderer.setStyle(document.body, 'filter', 'grayscale(0)');
+      this.renderer.setStyle(document.body, 'background-color', '#16161a');
+      this.comunicacionService.cambiarClase(false)
+    }
+
   }
 
   // MEDETODOS PARA EL MODAL

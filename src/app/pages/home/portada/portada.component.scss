@@ -56,6 +56,9 @@
                 }
             }
         }
+        &__imgContrast{
+            filter: grayscale(1);
+        }
         @media (width > 480px){
             padding: 70px 20% 0 20%;
         }
@@ -85,5 +88,11 @@
           @media (width> 905px) {
             padding: 0 16%;
           }
+    }
+}
+.main_portadaContrast{
+    background-color: black;
+    h1, p {
+        color: white;
     }
 }

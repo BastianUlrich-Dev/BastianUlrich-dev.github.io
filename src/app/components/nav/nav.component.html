@@ -1,13 +1,16 @@
 <nav class="main_nav">
-    <section class="main_nav__menu">
+    <section [ngClass]="{'menu_contrast': !navContrast}" class="main_nav__menu">
     </section>
-    <article [ngClass]="{'main_nav__menu_list--active': !buttonMenu}" class="main_nav__menu_list">
+    <article [ngClass]="{'main_nav__menu_list--active': !buttonMenu, 'main_nav__menu_list--activeContrast': !navContrast}" class="main_nav__menu_list">
         <a (click)="activeMenu()" href="#idPortada">Inicio</a>
         <a (click)="activeMenu()" href="#idExperiencia">Experiencia</a>
         <a (click)="activeMenu()"href="#idSkills">Skills</a>
         <a (click)="activeMenu()" href="#idProyects">Mis proyectos</a>
         <a (click)="abrirModal()" class="main_nav__menu_list--animation">Información de la web</a>
     </article>
+    <div (click)="activeContrast()" class="main_nav__menu_contrast material-symbols-outlined">
+        contrast
+        </div>
     <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
 </nav>
 <section *ngIf="isOpen">

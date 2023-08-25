@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComuniacionService } from 'src/app/services/comuniacion.service';
 
 @Component({
   selector: 'app-proyects',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyects.component.scss']
 })
 export class ProyectsComponent {
+  changeClase: boolean = false;
+
+  constructor(private comunicacionService : ComuniacionService){}
+
+  ngOnInit(): void {
+    this.comunicacionService.clase$.subscribe(clase =>{
+      this.changeClase = clase;
+      console.log(this.changeClase );
+      
+    })
+  }
   proyectsObj = [
     {
       img: "../../../../assets/img/captura-proyect-01.png",

@@ -9,6 +9,7 @@ h2 {
 
 .main_proyects__container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     margin: 32px 0 40px;
     gap: 32px;
@@ -33,6 +34,9 @@ h2 {
                 width: 100%;
             }
         }
+        .container_imgContrast{
+            filter: grayscale(1);
+        }
         &__link{
             margin-top: 18px;
             font-size: 1.125rem;
@@ -40,6 +44,11 @@ h2 {
         @media (width > 480px) {
             width: 45%;
         }
+    }
+    .main_proyects__container_cardContrast{
+        background-color: black;
+        border: 1px solid white;
+        line-height: 24px;
     }
 
     &_card:nth-child(1) {

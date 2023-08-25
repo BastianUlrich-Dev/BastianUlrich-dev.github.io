@@ -3,13 +3,13 @@
     <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
         <div class="container_img">
             <img class="imgFilter" src="{{item.img}}" alt="">
-            <div class="percentage percentage--{{item.title}}">
+            <div [ngClass]="{'percentageContrast': changeClase}" class="percentage percentage--{{item.title}}">
                 <span>{{item.percentage}}</span>
             </div>
         </div>
         <div class="container_description">
             <h2>{{item.title | uppercase}}</h2>
-            <p>{{item.description}}.</p>
+            <p [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
         </div>
     </article>
 </section>

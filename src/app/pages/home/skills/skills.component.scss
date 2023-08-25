@@ -74,6 +74,14 @@
                     margin: -18px 0 0 52px;
                 }
             }
+            .percentageContrast{
+                    background-color: black;
+                    border: 2px solid white;
+                    span{
+                            color: white;
+                            letter-spacing: 1px;
+                    }
+            }
         }
         @media (width > 480px) {
             margin: 3px;
@@ -87,6 +95,12 @@
             }
             p{
                 font-size: clamp(0.75rem, 3vw, 1.5rem); 
+            }
+            .container_descriptionContrast{
+                color: white;
+                font-size: 1rem;
+                letter-spacing: 1px;
+                line-height: 17px;
             }
         }
     }
