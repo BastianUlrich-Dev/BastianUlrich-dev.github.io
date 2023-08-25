@@ -21,9 +21,9 @@ export class ProyectsComponent {
   proyectsObj = [
     {
       img: "../../../../assets/img/captura-proyect-01.png",
-      title: "Proyecto calculadora de edad",
+      title: "Proyecto calculadora de edad, meses y días.",
       subtitle: "",
-      description: "Proyecto calculador de edad, meses y días responsivo con formulario reactivo.",
+      description: "Responsivo con formulario reactivo.",
       ruta: "/proyecto01"
     },
     {
