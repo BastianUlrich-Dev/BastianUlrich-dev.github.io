@@ -8,9 +8,22 @@
         <a (click)="activeMenu()" href="#idProyects">Mis proyectos</a>
         <a (click)="abrirModal()" class="main_nav__menu_list--animation">Información de la web</a>
     </article>
-    <div (click)="activeContrast()" class="main_nav__menu_contrast material-symbols-outlined">
-        contrast
+    <article class="main_nav__menu_list main_nav__menu_list--accesibility" [ngClass]="{'main_nav__menu_list--accesibility--active': !buttonAccesibility, 'main_nav__menu_list--accesibility--activeContrast': !navContrast}">
+        <section (click)="activeContrast()" class="main_nav__menu_list--accesibility__contrast">
+            <div class="material-symbols-outlined">
+                contrast
+            </div>
+            Contraste
+        </section>
+    </article>
+    <!-- BOTON MENU DE A11Y -->
+    <article (click)="activeMenuAccesibility()" class="main_nav__menu_contrast">
+        <div class="material-symbols-outlined">
+            accessibility_new
         </div>
+        Accesibilidad
+    </article>
+    <!-- BOTON MENU OPCIONES -->
     <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
 </nav>
 <section *ngIf="isOpen">

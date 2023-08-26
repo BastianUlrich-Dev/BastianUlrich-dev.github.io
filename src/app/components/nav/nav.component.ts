@@ -10,6 +10,7 @@ import { ComuniacionService } from 'src/app/services/comuniacion.service';
 export class NavComponent {
 
   buttonMenu:boolean = true;
+  buttonAccesibility:boolean = true;
   buttonContrast: boolean = true;
   toggleChangeClass: boolean = true;
   navContrast: boolean = true;
@@ -23,6 +24,10 @@ export class NavComponent {
    this.modal = new ModalComponent(this.renderer);
   }
 
+  activeMenuAccesibility(){
+    this.buttonAccesibility = !this.buttonAccesibility;
+  }
+
   activeMenu(){
     this.buttonMenu = !this.buttonMenu;
   }
@@ -30,7 +35,7 @@ export class NavComponent {
     this.buttonContrast = !this.buttonContrast;
     this.navContrast = !this.navContrast;
     this.changeContrast();
-
+    this.buttonAccesibility = true;
   }
   changeContrast(){
     if (!this.buttonContrast) {
