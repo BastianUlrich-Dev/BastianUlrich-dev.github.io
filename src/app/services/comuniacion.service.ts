@@ -13,4 +13,7 @@ export class ComuniacionService {
   cambiarClase(clase: boolean) {
     this.clase.next(clase);
   }
+  cambiarFontSize(){
+    
+  }
 }

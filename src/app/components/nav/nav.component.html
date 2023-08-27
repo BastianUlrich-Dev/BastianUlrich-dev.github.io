@@ -15,6 +15,18 @@
             </div>
             Contraste
         </section>
+        <section (click)="aumentarSize()" class="main_nav__menu_list--accesibility_text main_nav__menu_list--accesibility__contrast">
+            <div class="material-symbols-outlined">
+                text_increase
+            </div>
+            Ascender
+        </section>
+        <section (click)="disminuirSize()" class="main_nav__menu_list--accesibility_text main_nav__menu_list--accesibility__contrast">
+            <div class="material-symbols-outlined">
+                text_decrease
+            </div>
+            Descender
+        </section>
     </article>
     <!-- BOTON MENU DE A11Y -->
     <article (click)="activeMenuAccesibility()" class="main_nav__menu_contrast">
@@ -22,6 +34,7 @@
             accessibility_new
         </div>
         Accesibilidad
+
     </article>
     <!-- BOTON MENU OPCIONES -->
     <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>

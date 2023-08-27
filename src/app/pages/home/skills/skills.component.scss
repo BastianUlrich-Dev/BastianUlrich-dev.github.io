@@ -1,5 +1,9 @@
 .title-margin-top{
+    text-align: center;
     margin-top: 24px;
+}
+.main_description--colorGray{
+   color: #94a1b2;
 }
 
 .main_portada__skill{
@@ -89,13 +93,6 @@
             width: 45%;
         }
         .container_description{
-            h2{
-                color: #fffffe;
-                font-size: clamp(1.5rem, 3vw, 2rem);
-            }
-            p{
-                font-size: clamp(0.75rem, 3vw, 1.5rem); 
-            }
             .container_descriptionContrast{
                 color: white;
                 letter-spacing: 1px;

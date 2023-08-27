@@ -1,12 +1,12 @@
-<h1 id="idProyects" class="title title--margin-top">PROYECTOS</h1>
+<h1 id="idProyects" class="main_title title--margin-top">PROYECTOS</h1>
 <section class="main_proyects__container">
     <article [ngClass]="{'main_proyects__container_cardContrast': changeClase}" *ngFor="let item of proyectsObj" class="main_proyects__container_card">
         <div [ngClass]="{'container_imgContrast': changeClase}" class="container_img">
             <img src="{{item.img}}" alt="Vista previa de un proyecto">
         </div>
-        <h2>{{item.title}}</h2>
-        <p>{{item.subtitle}}</p>
-        <p>{{item.description}}</p>
-        <a class="main_proyects__container_card__link" routerLink={{item.ruta}}>Visitar</a>
+        <h2 class="main_subtitle">{{item.title}}</h2>
+        <p class="main_description">{{item.subtitle}}</p>
+        <p class="main_description">{{item.description}}</p>
+        <a class="main_description main_proyects__container_card__link" routerLink={{item.ruta}}>Visitar</a>
     </article>
 </section>

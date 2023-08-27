@@ -10,7 +10,26 @@ html{
 
 body{
     background-color: #16161a;
+    font-size: 100%;
+    color: #fffffe;
+    .main_title{
+        font-size: 1.5em;
+        @media (width > 930px) {
+            font-size: 2.5em;
+        } 
+    }
+    .main_subtitle{
+        font-size: 1.625em;
+    }
+    .main_description{
+        color: #fffffe;
+        font-size: 1em;
+        @media (width > 930px) {
+            font-size: 1.5em;
+        }
+    }
 }
+
 
 a{
     color: #fffffe;
@@ -23,7 +42,6 @@ p, span{
 
 .title{
     font-size: clamp(1.5rem, 3vw, 2rem);
-    text-align: center;
     color: #fffffe;
 }
 

@@ -1,10 +1,6 @@
-h2 {
-    color: #fffffe;
-    margin-top: 8px;
-}
-
 .title--margin-top {
     margin-top: 24px;
+    text-align: center;
 }
 
 .main_proyects__container {
@@ -13,11 +9,6 @@ h2 {
     flex-direction: column;
     margin: 32px 0 40px;
     gap: 32px;
-
-    p {
-        font-size: clamp(0.8125rem, 3vw, 1.5rem);
-        color: #fffffe;
-    }
 
     &_card {
         padding: 24px;

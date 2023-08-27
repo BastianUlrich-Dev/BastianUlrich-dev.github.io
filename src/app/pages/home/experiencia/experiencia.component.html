@@ -1,8 +1,8 @@
-<h1 id="idExperiencia" class="title title--margin-top">EXPERIENCIA</h1>
+<h1 id="idExperiencia" class="main_title title--margin-top">EXPERIENCIA</h1>
 <section class="main_experiencia__container">
     <article [ngClass]="{'main_experiencia__container_cardContrast': changeClase}" *ngFor="let item of experienciaObj" class="main_experiencia__container_card">
-        <h2 class="main_experiencia__container_card__title">{{item.title}}</h2>
-        <p class="main_experiencia__container_card__subtitle">{{item.company}}</p>
-        <p class="main_experiencia__container_card__description">{{item.description}}</p>
+        <h2 class="main_subtitle">{{item.title}}</h2>
+        <p class="main_description">{{item.company}}</p>
+        <p class="main_description">{{item.description}}</p>
     </article>
 </section>
