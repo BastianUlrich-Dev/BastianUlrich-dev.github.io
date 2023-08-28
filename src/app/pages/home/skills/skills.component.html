@@ -12,4 +12,13 @@
             <p class="main_description main_description--colorGray" [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
         </div>
     </article>
+    <div class="divShadow" *ngIf="divShadown">
+        <img class="divShadow_img" src="../../../../assets/img/gorila.jpg">
+    </div>
+    <button (click)="activarEgg1()" id="div1" class="ebutton div1" [disabled]="begg1"></button>
+    <button (click)="activarEgg4()" id="div4" class="ebutton div4" [disabled]="begg4"></button>
+    <button (click)="activarEgg5()" id="div5" class="ebutton div5" [disabled]="begg5"></button>
+    <button (click)="activarEgg6()" id="div6" class="ebutton div6" [disabled]="begg6"></button>
+    <button (click)="activarEgg3()" id="div3" class="ebutton div3" [disabled]="begg3"></button>
+    <button (click)="activarEgg2()" id="div2" class="ebutton div2" [disabled]="begg2"></button>
 </section>

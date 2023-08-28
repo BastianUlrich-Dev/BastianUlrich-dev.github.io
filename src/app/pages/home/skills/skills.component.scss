@@ -10,6 +10,7 @@
 .main_portada__skill{
     padding: 0 20%;
     gap: 24px;
+    position: relative;
     display: flex;
     flex-direction: column;
     
@@ -105,5 +106,73 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .divShadow{
+        position: absolute;
+        top: 35%;
+        left: 0;
+        text-align: center;
+        .divShadow_img{
+            width: 100%;
+            margin: 0 auto;
+            @media (width> 480px) {
+                width: 64%;
+                margin: 0 auto;
+            }
+    }
+    @media (width> 480px) {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        text-align: center;
+    }
+    // EGG
+    }
+
+    .ebutton{
+        border: none;
+        background-color: transparent;
+    }
+    .div1{
+        position: absolute;
+        left: 0;
+        width: 10px;
+        height: 10%;
+    }
+    .div2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10%;
+    }
+    .div3{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        height: 10%;
+    }
+    .div4{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10%;
+    }
+    .div5{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 10%;
+    }
+    .div6{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 10px;
+        height: 10%;
     }
 }
