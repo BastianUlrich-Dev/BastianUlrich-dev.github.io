@@ -13,9 +13,7 @@ export class ProyectsComponent {
 
   ngOnInit(): void {
     this.comunicacionService.clase$.subscribe(clase =>{
-      this.changeClase = clase;
-      console.log(this.changeClase );
-      
+      this.changeClase = clase;      
     })
   }
   proyectsObj = [

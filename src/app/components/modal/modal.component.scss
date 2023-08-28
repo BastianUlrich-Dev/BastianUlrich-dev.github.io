@@ -1,5 +1,6 @@
+@import '../../../assets/styles/colors';
 .container_modal{
-    background-color: rgb(0 0 0);
+    background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
@@ -7,45 +8,37 @@
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
     .modal{
-        height: 400px;
-        background-color: #7f5af0;
+        height: 518px;
+        background-color: $color-highlight;
         position: fixed;
-        align-content: center;
-        margin: 0 16%;
+        margin: 4%;
         padding: 24px;
-        top: 10%;
+        top: 0;
 
-        span{
-            color: white;
+        .modal_close{
+            color: $color-font;
             position: absolute;
             right: 0;
             top: 0;
             margin: 8px;
             cursor: pointer;
         }
-        h1{
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-        p{
-            font-size: 1.5rem;
-        }
-        h1, p{
-            color: #fffffe;
-        }
         &__description{
             overflow: auto;
-            max-height: 278px;
+            height: 100%;
+            max-height: 400px;
             @media (width> 480px){
-                max-height: 200px;
+            }
+            .icon_cv{
+                display: flex;
+                cursor: pointer;
             }
         }
-        
-        @media (width > 480px){
-            top: 30%;
-            height: auto;
-        }
+    }  
+}
+.container_modalContrast{
+    .modalContrast{
+        background-color: black;
+        border: 1px solid white;
     }
-
-  
 }

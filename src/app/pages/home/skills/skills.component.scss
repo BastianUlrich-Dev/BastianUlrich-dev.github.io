@@ -1,9 +1,10 @@
+@import '../../../../assets/styles/colors';
 .title-margin-top{
     text-align: center;
     margin-top: 24px;
 }
 .main_description--colorGray{
-   color: #94a1b2;
+   color: $color-subtitle;
 }
 
 .main_portada__skill{

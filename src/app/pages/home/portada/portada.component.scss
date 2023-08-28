@@ -1,8 +1,9 @@
+@import '../../../../assets/styles/colors';
 .main_portada{
     display: flex;
     padding-top: 32px;
-    background-color: #16161a;
-    color: #fffffe;
+    background-color: $color-background-card;
+    color: $color-font;
     gap: 8px;
     flex-direction: column;
     
@@ -23,10 +24,10 @@
                 font-size: clamp(12px, 3vw, 24px);
             }
             &_button{
-                background-color: #7f5af0;
+                background-color: $color-highlight;
                 border: none;
                 border-radius: 16px;
-                color: #fffffe;
+                color: $color-font;
                 margin-top: 8px;
                 padding: 8px;
                 width: 100%;
@@ -93,6 +94,6 @@
 .main_portadaContrast{
     background-color: black;
     h1, p {
-        color: white;
+        color: $color-font;
     }
 }

@@ -10,7 +10,7 @@ import { ComuniacionService } from 'src/app/services/comuniacion.service';
 export class PortadaComponent {
   changeClase: boolean = false;
   imgProfile:string = "../../../assets/img/imgprofile.png";
-  modal: ModalComponent;
+  // modal: ModalComponent;
   titleModal: string = "Informacion personal";
   descriptionModal: string = `Analista programador con experiencia en desarrollo de módulos. Experiencia
   en Front-end utilizando Html5, JavaScript, CSS3, Bootstrap, además de contar
@@ -25,24 +25,22 @@ export class PortadaComponent {
   isOpen: boolean = false;
   
   constructor(private renderer: Renderer2, private comunicacionService : ComuniacionService) {
-    this.modal = new ModalComponent(this.renderer);
+    // this.modal = new ModalComponent(this.renderer);
   }
   ngOnInit(): void {
     this.comunicacionService.clase$.subscribe(clase =>{
-      this.changeClase = clase;
-      console.log(this.changeClase );
-      
+      this.changeClase = clase;      
     })
   }
     // MEDETODOS PARA EL MODAL
-    abrirModal(){
-      this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);
-      this.isOpen = !this.isOpen;
-      console.log("desde el nav");
+    // abrirModal(){
+    //   this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);
+    //   this.isOpen = !this.isOpen;
+    //   console.log("desde el nav");
       
-    }
-    cerrarModal(rta: boolean){
-      this.isOpen = rta;
-    }
+    // }
+    // cerrarModal(rta: boolean){
+    //   this.isOpen = rta;
+    // }
 
 }

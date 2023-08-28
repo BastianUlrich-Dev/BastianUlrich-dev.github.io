@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/styles/colors';
 html{
     scroll-behavior: smooth;
 }
@@ -9,9 +10,9 @@ html{
 }
 
 body{
-    background-color: #16161a;
+    background-color: $color-background-card;
     font-size: 100%;
-    color: #fffffe;
+    color: $color-font;
     .main_title{
         font-size: 1.5em;
         @media (width > 930px) {
@@ -22,7 +23,7 @@ body{
         font-size: 1.625em;
     }
     .main_description{
-        color: #fffffe;
+        color: $color-font;
         font-size: 1em;
         @media (width > 930px) {
             font-size: 1.5em;
@@ -32,16 +33,16 @@ body{
 
 
 a{
-    color: #fffffe;
+    color: $color-font;
     text-decoration: none;
 }
 
-p, span{
-    color: #94a1b2
+p{
+    color: $color-subtitle;
 }
 
 .title{
     font-size: clamp(1.5rem, 3vw, 2rem);
-    color: #fffffe;
+    color: $color-font;
 }
 

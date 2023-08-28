@@ -14,7 +14,6 @@ export class SkillsComponent {
   ngOnInit(): void {
     this.comunicacionService.clase$.subscribe(clase =>{
       this.changeClase = clase;
-      console.log(this.changeClase );
       
     })
   }

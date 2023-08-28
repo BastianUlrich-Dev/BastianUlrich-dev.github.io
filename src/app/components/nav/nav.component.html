@@ -2,11 +2,11 @@
     <section [ngClass]="{'menu_contrast': !navContrast}" class="main_nav__menu">
     </section>
     <article [ngClass]="{'main_nav__menu_list--active': !buttonMenu, 'main_nav__menu_list--activeContrast': !navContrast}" class="main_nav__menu_list">
-        <a (click)="activeMenu()" href="#idPortada">Inicio</a>
-        <a (click)="activeMenu()" href="#idExperiencia">Experiencia</a>
-        <a (click)="activeMenu()"href="#idSkills">Skills</a>
-        <a (click)="activeMenu()" href="#idProyects">Mis proyectos</a>
-        <a (click)="abrirModal()" class="main_nav__menu_list--animation">Información de la web</a>
+        <a [ngClass]="{'a_Contrast': !navContrast}" (click)="activeMenu()" href="#idPortada">Inicio</a>
+        <a [ngClass]="{'a_Contrast': !navContrast}" (click)="activeMenu()" href="#idExperiencia">Experiencia</a>
+        <a [ngClass]="{'a_Contrast': !navContrast}" (click)="activeMenu()"href="#idSkills">Skills</a>
+        <a [ngClass]="{'a_Contrast': !navContrast}" (click)="activeMenu()" href="#idProyects">Mis proyectos</a>
+        <a [ngClass]="{'a_Contrast': !navContrast}" (click)="abrirModal()" class="main_nav__menu_list--animation">Información de la web</a>
     </article>
     <article class="main_nav__menu_list main_nav__menu_list--accesibility" [ngClass]="{'main_nav__menu_list--accesibility--active': !buttonAccesibility, 'main_nav__menu_list--accesibility--activeContrast': !navContrast}">
         <section (click)="activeContrast()" class="main_nav__menu_list--accesibility__contrast">
@@ -40,5 +40,5 @@
     <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
 </nav>
 <section *ngIf="isOpen">
-    <app-modal (closeModal)="cerrarModal($event)" [title]="titleModal" [description]="descriptionModal" [isOpen]="isOpen"></app-modal>
+    <app-modal (closeModal)="cerrarModal($event)" [title]="titleModal" [maindescription]="descriptionModalMain" [description]="descriptionModal" [isOpen]="isOpen" [contrastActive]="navContrast"></app-modal>
 </section>

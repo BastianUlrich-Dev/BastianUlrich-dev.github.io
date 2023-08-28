@@ -1,3 +1,4 @@
+@import '../../../../assets/styles/colors';
 .title--margin-top{
     margin-top: 24px;
     text-align: center;
@@ -16,11 +17,11 @@
             width: 45%;
         }
         &__title{
-            color: #fffffe;
+            color: $color-font;
             font-size: clamp(1.5rem, 3vw, 2rem);
         }
         &__subtitle, &__description{
-            color: #fffffe;
+            color: $color-font;
             font-size: clamp(0.8125rem, 3vw, 1.5rem);
         }
     }
@@ -34,13 +35,13 @@
         border: none !important;
     }
     &_card:nth-child(1){
-        background-color: #7f5af0;
+        background-color: $color-highlight;
     }
     &_card:nth-child(2){
-        background-color: #2cb67d;
+        background-color: $color-tertiary;
     }
     &_card:nth-child(3){
-        background-color: #94a1b2;
+        background-color: $color-subtitle;
     }
     &_card:last-child{
         padding: 0;

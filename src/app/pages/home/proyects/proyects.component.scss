@@ -1,3 +1,4 @@
+@import '../../../../assets/styles/colors';
 .title--margin-top {
     margin-top: 24px;
     text-align: center;
@@ -44,25 +45,25 @@
     }
 
     &_card:nth-child(1) {
-        background-color: #7f5af0;
+        background-color: $color-highlight;
     }
 
     &_card:nth-child(2) {
-        background-color: #2cb67d;
+        background-color: $color-tertiary;
         .main_proyects__container_card__link{
             display: none;
         }
     }
 
     &_card:nth-child(3) {
-        background-color: #94a1b2;
+        background-color: $color-subtitle;
         .main_proyects__container_card__link{
             display: none;
         }
     }
 
     &_card:nth-child(4) {
-        background-color: #72757e;
+        background-color: $color-secondary;
         .main_proyects__container_card__link{
             display: none;
         }

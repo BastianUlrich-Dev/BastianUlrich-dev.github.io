@@ -1,5 +1,6 @@
 import { Component, Renderer2, ElementRef, RendererStyleFlags2  } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
+import { HttpClient } from '@angular/common/http';
 import { ComuniacionService } from 'src/app/services/comuniacion.service';
 
 @Component({
@@ -20,11 +21,22 @@ export class NavComponent {
   modal: ModalComponent;
 
   titleModal: string = "Información importante";
+  descriptionModalMain: string = `Analista programador con experiencia en desarrollo de módulos. Experiencia
+  en Front-end utilizando Html5, JavaScript, CSS3, Bootstrap, además de contar
+  con conocimientos de librería react.js y Framework Angular. Experiencia en
+  Back-end con lenguaje php, java y node.js con express.js . Por otra parte,
+  experiencia con Base de datos Mysql y conocimiento Firebase. prototipado
+  con Figma. manejo de GIT y conocimientos básico UX/UI. Fortalezas, gran
+  capacidad de aprendizaje autónomo con el objetivo de buscar soluciones
+  eficientes e innovadoras, interés en la investigación e implementación de
+  mejoras constante a los procesos de trabajo, capacidad de ser ordenado y
+  organizado lo que facilita la labor.`;
   descriptionModal: string = "Este sitio web está diseñado como portafolio con proyectos básicos. se está utilizando framework Angular 16 sin ningún framework de diseño. Cabe destacar que estará en constante actualización";
   isOpen: boolean = false;
+  contrastActive: boolean = false;
 
-  constructor(private renderer: Renderer2, private comunicacionService: ComuniacionService, private el: ElementRef) {
-   this.modal = new ModalComponent(this.renderer);
+  constructor(private renderer: Renderer2, private http: HttpClient , private comunicacionService: ComuniacionService, private el: ElementRef) {
+   this.modal = new ModalComponent(this.renderer,this.http);
   }
 
   ngOnInit(): void {
@@ -35,9 +47,7 @@ export class NavComponent {
   aumentarSize(){
     if (this.clickCounter < 2) {
       this.fontSize += 10;
-      this.clickCounter++;
-      console.log('clicks:' + this.clickCounter);
-      
+      this.clickCounter++;      
       this.renderer.setStyle(document.body, 'font-size', `${this.fontSize}%`);
     }
   }
@@ -45,7 +55,6 @@ export class NavComponent {
     if (this.clickCounter > -2) {
       this.fontSize -= 10;
       this.clickCounter--;
-      console.log('clicks:' + this.clickCounter);
       this.renderer.setStyle(document.body, 'font-size', `${this.fontSize}%`);
     }
   }
@@ -93,9 +102,10 @@ export class NavComponent {
 
   // MEDETODOS PARA EL MODAL
   abrirModal(){
-    this.modal.recibirInfo(this.titleModal, this.descriptionModal, this.isOpen);
+    this.modal.recibirInfo(this.titleModal, this.descriptionModalMain, this.descriptionModal, this.isOpen , this.contrastActive);
     this.isOpen = !this.isOpen;
     this.buttonMenu = true;
+    this.contrastActive = this.buttonContrast;    
     this.renderer.setStyle(document.body, 'overflow', 'hidden');
   }
   cerrarModal(rta: boolean){
