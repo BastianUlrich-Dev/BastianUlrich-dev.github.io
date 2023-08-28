@@ -1,0 +1,77 @@
+@import "../../../../assets/styles/colors";
+
+.nav_pinterest{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif;
+    font-weight: $font-weight-semibold;
+    padding: 16px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    &__icon{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &_img{
+            width: 32px;
+            height: 32px;
+        }
+        &_p{
+            color: $color-error-pinterest;
+            font-size: 1.25rem;
+        }
+    }
+
+    .nav_pinterest__container_ul{
+        display: flex;
+        .nav_pinterest__ul-info{
+            margin-right: 24px;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            color: $color-font-primary;
+            li{
+                margin: 16px;
+                cursor: pointer;
+            }
+            li:hover{
+                text-decoration: underline;
+            }
+        }
+
+        .nav_pinterest__ul-button{
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 8px;
+            color: $color-font-primary;
+            button{
+                height: 40px;
+                padding: 12px;
+                border-radius: 24px;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            &-red{
+                color: $color-font-white;
+                background-color: $color-button-pinterest;
+            }
+            &-red:hover{
+                background-color: $color-button-pinterest-hover;
+            }
+            &-gray{
+                background-color: $color-button-gray; 
+            }
+            &-gray:hover{
+                background-color: $color-button-pinterest-hover-gray;
+            }
+        }
+    }
+}

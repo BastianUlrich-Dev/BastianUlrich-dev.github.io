@@ -4,12 +4,11 @@ html{
     scroll-behavior: smooth;
 }
 * {
-    font-family: monospace;
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
+    font-family: monospace;
     background-color: $color-background-card;
     font-size: 100%;
     color: $color-font;

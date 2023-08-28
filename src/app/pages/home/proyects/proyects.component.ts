@@ -26,7 +26,7 @@ export class ProyectsComponent {
     },
     {
       img: "../../../../assets/img/patron2.png",
-      title: "Proyecto",
+      title: "Proyecto clon de pinterest",
       subtitle: "(En progreso)",
       description: "",
       ruta: "/proyecto02"
