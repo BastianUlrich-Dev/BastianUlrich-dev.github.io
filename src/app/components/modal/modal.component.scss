@@ -14,7 +14,9 @@
         margin: 4%;
         padding: 24px;
         top: 0;
-
+        .main_title--margin-bottom{
+            margin-bottom: 16px;
+        }
         .modal_close{
             color: $color-font;
             position: absolute;

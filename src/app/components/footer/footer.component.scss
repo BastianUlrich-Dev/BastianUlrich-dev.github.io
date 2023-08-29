@@ -14,6 +14,9 @@ ul{
     a img{
         width: 20px;
     }
+    span{
+        cursor: pointer;
+    }
 }
 .ulContrast{
     filter: grayscale(1);
