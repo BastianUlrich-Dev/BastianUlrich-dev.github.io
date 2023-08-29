@@ -1,1 +1,96 @@
-@import "../../../assets/styles/colors";
+// ### Color-Primary
+
+$Moderate-blue: hsl(238, 40%, 52%);
+$Soft-Red: hsl(358, 79%, 66%);
+$Light-grayish-blue: hsl(239, 57%, 85%);
+$Pale-red: hsl(357, 100%, 86%);
+
+// ### Color-Neutral
+
+$Dark-blue: hsl(212, 24%, 26%);
+$Grayish-Blue: hsl(211, 10%, 45%);
+$Light-gray: hsl(223, 19%, 93%);
+$Very-light-gray: hsl(228, 33%, 97%);
+$White: hsl(0, 0%, 100%);
+
+
+.main_proyect02{
+    background-color: $Very-light-gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    height: 100%;
+    color: $Dark-blue;
+    .container_proyect02{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        gap: 12px;
+        .main_card{
+            background-color: $White;
+            padding: 16px;
+            border-radius: 12px;
+            p{
+                color: $Grayish-Blue;
+                margin-bottom: 8px;
+            }
+            &__head{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+                img{
+                    width: 36px;
+                }
+                &-name{
+                    font-size: 1rem;
+                    span{
+                        color: $Grayish-Blue;
+                    }
+                }
+            }
+            .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $Moderate-blue;
+                .container_plus{
+                    display: flex;
+                    width: 82px;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background-color: $Very-light-gray;
+                    border-radius: 8px;
+                    padding: 5px;
+                    gap: 6px;
+                    cursor: pointer;
+                }
+                .container_reply{
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+
+        .container_card-reply{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+            .main_card-reply{
+                position: relative;
+                margin-left: 17px;
+            }
+            
+        }
+        .container_card-reply::after{
+            content: "";
+            border: 1px solid $Light-gray;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+}
