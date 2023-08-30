@@ -1,6 +1,5 @@
 <section class="main_proyect02">
     <article class="container_proyect02">
-
         <article class="main_card">
             <div class="main_card__head">
                 <img src="../../../assets/img/proyect02/avatars/image-amyrobson.webp" alt="">
@@ -12,6 +11,27 @@
                 <div class="container_reply"><img src="../../../assets/img/proyect02/icon-reply.svg" alt="">Reply</div>
             </div>
         </article>
+        <article *ngFor="let respuesta of respuestas" class="main_card main_card-reply main_card-reply--my">
+            <div class="main_card__head">
+                <img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt="">
+                <h2 class="main_card__head-name">amyrobson<span> 1 month ago</span></h2>
+            </div>
+            <p>{{respuesta.rtaComment}}</p>
+            <!-- <button (click)="eliminarRespuesta(respuesta)">Eliminar</button> -->
+            <div class="container container-edit">
+                <div class="container_button-delete-edit">
+                    <div (click)="eliminarRespuesta(respuesta)" class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
+                    <div (click)="editarRespuesta(respuesta)" class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
+                </div>
+            </div>
+        </article>
+        <form [formGroup]="miFormulario" (submit)="enviarFormulario()" *ngIf="true" class="container_send">
+            <textarea id="rtaComment" name="rtaComment" formControlName="rtaComment" placeholder="Add a comment..." rows="4" cols="50"></textarea>
+            <div class="container_send-button-img">
+                <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
+                <button type="submit">SEND</button>
+            </div>
+        </form>
 
         <section class="container_card-reply">
             <!-- CONTENEDOR DE CARD CON RESPUESTA -->
@@ -24,6 +44,20 @@
                 <div class="container">
                     <div class="container_plus"><img src="../../../assets/img/proyect02/icon-plus.svg" alt="">12<img src="../../../assets/img/proyect02/icon-minus.svg" alt=""> </div>
                     <div class="container_reply"><img src="../../../assets/img/proyect02/icon-reply.svg" alt="">Reply</div>
+                </div>
+            </article>
+            <article class="main_card main_card-reply main_card-reply--my">
+                <div class="main_card__head">
+                    <img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt="">
+                    <h2 class="main_card__head-name">amyrobson<span> 1 month ago</span></h2>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae aut natus voluptas facilis! Aliquam maiores asperiores voluptate, ab veniam, quae ducimus magni ea adipisci odio inventore, eaque in eius ipsum?</p>
+                <div class="container">
+                    <div class="container_plus"><img src="../../../assets/img/proyect02/icon-plus.svg" alt="">2<img src="../../../assets/img/proyect02/icon-minus.svg" alt=""> </div>
+                    <div class="container_button-delete-edit">
+                        <div class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
+                        <div class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
+                    </div>
                 </div>
             </article>
         </section>
@@ -42,10 +76,12 @@
             </div>
         </article>
 
-        <section>
-            <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
-            <input type="text" placeholder="Add a comment...">
-            <button>SEND</button>
-        </section>
+        <form class="container_send">
+            <textarea id="miTextArea" name="miTextArea" placeholder="Add a comment..." rows="4" cols="50"></textarea>
+            <div class="container_send-button-img">
+                <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
+                <button>SEND</button>
+            </div>
+        </form>
     </article>
 </section>
