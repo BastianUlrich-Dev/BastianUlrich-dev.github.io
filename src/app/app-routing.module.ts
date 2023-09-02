@@ -11,10 +11,10 @@ const routes: Routes = [
     path: 'proyecto01',
     loadChildren: () => import('./pages/proyecto01/proyecto01.module').then(m => m.Proyecto01Module)
   },
-  // {
-  //   path: 'proyecto02',
-  //   loadChildren: () => import('./pages/proyecto02/proyecto02.module').then(m => m.Proyecto02Module)
-  // },
+  {
+    path: 'proyecto02',
+    loadChildren: () => import('./pages/proyecto02/proyecto02.module').then(m => m.Proyecto02Module)
+  },
   {
     path: '**',
     redirectTo: ''

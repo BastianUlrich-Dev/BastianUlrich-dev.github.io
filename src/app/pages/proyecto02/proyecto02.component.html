@@ -1,40 +1,54 @@
 <section class="main_proyect02">
-    <article class="container_proyect02">
+    <article *ngFor="let item of comentarioUsuario;" class="container_proyect02">
         <article class="main_card">
             <div class="main_card__head">
-                <img src="../../../assets/img/proyect02/avatars/image-amyrobson.webp" alt="">
-                <h2 class="main_card__head-name">amyrobson<span> 1 month ago</span></h2>
+                <img src='{{item.img}}' alt="">
+                <h2 class="main_card__head-name">{{item.nombre}}<span> {{item.time}}</span></h2>
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae aut natus voluptas facilis! Aliquam maiores asperiores voluptate, ab veniam, quae ducimus magni ea adipisci odio inventore, eaque in eius ipsum?</p>
+            <p>{{item.comment}}</p>
             <div class="container">
-                <div class="container_plus"><img src="../../../assets/img/proyect02/icon-plus.svg" alt="">12<img src="../../../assets/img/proyect02/icon-minus.svg" alt=""> </div>
-                <div class="container_reply"><img src="../../../assets/img/proyect02/icon-reply.svg" alt="">Reply</div>
-            </div>
-        </article>
-        <article *ngFor="let respuesta of respuestas" class="main_card main_card-reply main_card-reply--my">
-            <div class="main_card__head">
-                <img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt="">
-                <h2 class="main_card__head-name">amyrobson<span> 1 month ago</span></h2>
-            </div>
-            <p>{{respuesta.rtaComment}}</p>
-            <!-- <button (click)="eliminarRespuesta(respuesta)">Eliminar</button> -->
-            <div class="container container-edit">
-                <div class="container_button-delete-edit">
-                    <div (click)="eliminarRespuesta(respuesta)" class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
-                    <div (click)="editarRespuesta(respuesta)" class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
+                <div class="container_plus">
+                    <img src="../../../assets/img/proyect02/icon-plus.svg" alt="">
+                    {{item.answers.length}} 
+                    <img src="../../../assets/img/proyect02/icon-minus.svg" alt=""> 
                 </div>
+                <div id="buttonReply{{item.id}}" (click)="openButtonReply(item)" class="container_reply"><img src="../../../assets/img/proyect02/icon-reply.svg" alt="">Reply</div>
             </div>
         </article>
-        <form [formGroup]="miFormulario" (submit)="enviarFormulario()" *ngIf="true" class="container_send">
-            <textarea id="rtaComment" name="rtaComment" formControlName="rtaComment" placeholder="Add a comment..." rows="4" cols="50"></textarea>
-            <div class="container_send-button-img">
-                <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
-                <button type="submit">SEND</button>
-            </div>
-        </form>
 
-        <section class="container_card-reply">
-            <!-- CONTENEDOR DE CARD CON RESPUESTA -->
+        <div *ngIf="buttonReply === item.id">
+            <article *ngFor="let respuesta of item.answers" class="main_card main_card-reply main_card-reply--my">
+            <!-- <article *ngFor="let respuesta of respuestas" class="main_card main_card-reply main_card-reply--my"> -->
+                <div *ngIf="respuesta.id != 2" class="main_card__head">
+                    <img src={{respuesta.img}} alt="">
+                    <h2 class="main_card__head-name">{{respuesta.time}}</h2>
+                </div>
+                <div *ngIf="respuesta.id == 2" class="main_card__head">
+                    <img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt="">
+                    <h2 class="main_card__head-name">{{respuesta.time}}</h2>
+                    
+                </div>
+                <p>{{respuesta.comment}}</p>
+                <!-- ESTO TIENE QUE APARECER SOLAMENTE CUANDO UNO COMENTA -->
+                <div class="container container-edit">
+                    <div class="container_button-delete-edit">
+                        <div (click)="eliminarRespuesta(respuesta)" class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
+                        <div (click)="editarRespuesta(respuesta)" class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
+                    </div>
+                </div>
+            </article>
+            <form [formGroup]="miFormulario" (submit)="enviarFormulario(item)" *ngIf="true" class="container_send">
+                <textarea id="rtaComment" name="rtaComment" formControlName="rtaComment" placeholder="Add a comment..." rows="4" cols="50"></textarea>
+                <div class="container_send-button-img">
+                    <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- <section class="container_card-reply">
+            CONTENEDOR DE CARD CON RESPUESTA
             <article class="main_card main_card-reply">
                 <div class="main_card__head">
                     <img src="../../../assets/img/proyect02/avatars/image-amyrobson.webp" alt="">
@@ -82,6 +96,6 @@
                 <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
                 <button>SEND</button>
             </div>
-        </form>
+        </form> -->
     </article>
 </section>
