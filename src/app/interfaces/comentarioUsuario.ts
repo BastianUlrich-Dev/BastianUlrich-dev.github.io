@@ -5,7 +5,8 @@ export interface ComentarioUsuario {
     time: string;
     comment: string;
     answers: {
-      id: number;
+      idAnswers: number;
+      idUser: number;
       img: string;
       nombre: string;
       time: string;

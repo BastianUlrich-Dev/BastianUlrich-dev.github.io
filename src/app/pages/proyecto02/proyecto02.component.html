@@ -18,21 +18,21 @@
 
         <div *ngIf="buttonReply === item.id">
             <article *ngFor="let respuesta of item.answers" class="main_card main_card-reply main_card-reply--my">
-            <!-- <article *ngFor="let respuesta of respuestas" class="main_card main_card-reply main_card-reply--my"> -->
-                <div *ngIf="respuesta.id != 2" class="main_card__head">
+                <div *ngIf="respuesta.idUser != 2" class="main_card__head">
                     <img src={{respuesta.img}} alt="">
                     <h2 class="main_card__head-name">{{respuesta.time}}</h2>
                 </div>
-                <div *ngIf="respuesta.id == 2" class="main_card__head">
+                <div *ngIf="respuesta.idUser == 2" class="main_card__head">
                     <img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt="">
                     <h2 class="main_card__head-name">{{respuesta.time}}</h2>
                     
                 </div>
                 <p>{{respuesta.comment}}</p>
                 <!-- ESTO TIENE QUE APARECER SOLAMENTE CUANDO UNO COMENTA -->
-                <div class="container container-edit">
+                <!-- Esta validando que solo muestre el boton editar y eliminar cuando el ID sea igual a 2. el id es nuestro usuario  -->
+                <div *ngIf="respuesta.idUser == 2" class="container container-edit">
                     <div class="container_button-delete-edit">
-                        <div (click)="eliminarRespuesta(respuesta)" class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
+                        <div (click)="eliminarRespuesta(respuesta.idAnswers)" class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
                         <div (click)="editarRespuesta(respuesta)" class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
                     </div>
                 </div>

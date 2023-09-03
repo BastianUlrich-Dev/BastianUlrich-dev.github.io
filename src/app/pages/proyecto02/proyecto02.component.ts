@@ -47,7 +47,8 @@ export class Proyecto02Component {
       Thanks!`,
       answers: [
         {
-          id: 1,
+          idAnswers: 0,
+          idUser: 1,
           img: '../../../assets/img/proyect02/avatars/image-ramsesmiron.png',
           nombre:'ramsesmiron',
           time:"1 week ago",
@@ -59,7 +60,8 @@ export class Proyecto02Component {
           foundation first.`,
         },
         {
-          id: 2,
+          idAnswers: 1,
+          idUser: 2,
           img: '../../../assets/img/proyect02/avatars/image-juliusomo.png',
           nombre:'juliusomo',
           time:"2 days ago",
@@ -89,24 +91,29 @@ export class Proyecto02Component {
   enviarFormulario(item:any) {
 
     // Estoy recibiendo el item al apretar el boton enviar para sacar la posicion de la iteracion
-    // la convierto a numero a indexComentario
-    let indexComentario = Number(item.id);
-    const rtaComment = this.miFormulario.get('rtaComment').value;
+    // la convierto a numero a indexComentario y le resto 1 ya que las iteraciones de ngfor comienzan en 1 y no en 0
+    let indexComentario = Number(item.id)-1;
+
+    let rtaComment = this.miFormulario.get('rtaComment').value;
 
     // aqui se almacena el comentario de respuesta del formulario
-    const respuesta = {
+    let respuesta = {
       rtaComment: rtaComment
     };
 
-    // indexComentario viene con el numero de la iteracion que va y se lo asigno a la posicion del array comentarioUsuario
-    this.comentarioUsuario[indexComentario-1].answers.push({
-      id: 2,
+    let answers = this.comentarioUsuario[indexComentario].answers;
+    let idAnswers = answers.length + 1;
+
+    answers.push({
+      idAnswers: idAnswers,
+      idUser: 2,
       img: '../../../assets/img/proyect02/avatars/image-johnsmith.png',
       nombre: 'johnsmith',
       time: '2 months ago',
       comment: respuesta.rtaComment,
     });
     
+    // log console
     this.respuestas.push(respuesta);
     console.log(respuesta);
     console.log(this.comentarioUsuario);
@@ -116,13 +123,10 @@ export class Proyecto02Component {
   
   }
 
-
-  eliminarRespuesta(respuesta: any) {
-    const index = this.respuestas.indexOf(respuesta);
-    if (index !== -1) {
-      this.respuestas.splice(index, 1);
-      localStorage.setItem('respuestas', JSON.stringify(this.respuestas));
-    }
+  eliminarRespuesta(idAnswers: number) {
+    this.comentarioUsuario.forEach(c => {
+      c.answers = c.answers.filter(respuesta => respuesta.idAnswers !== idAnswers);
+    });
   }
 
   editarRespuesta(respuesta: any) {
