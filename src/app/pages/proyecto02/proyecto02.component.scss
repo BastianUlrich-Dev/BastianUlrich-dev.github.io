@@ -21,6 +21,9 @@ $White: hsl(0, 0%, 100%);
     height: 100%;
     color: $Dark-blue;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     .container_proyect02{
         display: flex;
         flex-direction: column;
@@ -86,11 +89,18 @@ $White: hsl(0, 0%, 100%);
             }
         }
 
+        .container_comment{
+            // gap: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
         .container_card-reply{
             display: flex;
             flex-direction: column;
             gap: 8px;
             position: relative;
+            margin-bottom: 16px;
             .main_card-reply{
                 position: relative;
                 margin-left: 17px;
