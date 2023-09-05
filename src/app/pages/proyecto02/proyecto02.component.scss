@@ -13,7 +13,16 @@ $Light-gray: hsl(223, 19%, 93%);
 $Very-light-gray: hsl(228, 33%, 97%);
 $White: hsl(0, 0%, 100%);
 
-
+textarea{
+    border: 1px solid $Light-gray;
+    border-radius: 8px;
+    padding: 12px;
+    max-width: 100%;
+    min-width: 70%;
+    max-height: 84px;
+    width: 100%;
+    margin-bottom: 8px;
+}
 .main_proyect02{
     background-color: $Very-light-gray;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -128,35 +137,27 @@ $White: hsl(0, 0%, 100%);
             
         }
 
-        .container_send{
-            padding: 12px;
-            background-color: $White;
-            border-radius: 8px;
-            textarea{
-                border: 1px solid $Light-gray;
-                border-radius: 8px;
-                padding: 12px;
-                max-width: 100%;
-                min-width: 70%;
-                max-height: 84px;
-                width: 100%;
-                margin-bottom: 8px;
+
+    }
+    .container_send{
+        padding: 12px;
+        background-color: $White;
+        border-radius: 8px;
+
+        &-button-img{
+            display: flex;
+            justify-content: space-between;
+        
+            div img{
+                width: 42px;
             }
-            &-button-img{
-                display: flex;
-                justify-content: space-between;
-            
-                div img{
-                    width: 42px;
-                }
-                button{
-                    width: 108px;
-                    border-radius: 8px;
-                    border: none;
-                    font-weight: 700;
-                    background-color: $Moderate-blue;
-                    color: white;
-                }
+            button{
+                width: 108px;
+                border-radius: 8px;
+                border: none;
+                font-weight: 700;
+                background-color: $Moderate-blue;
+                color: white;
             }
         }
     }

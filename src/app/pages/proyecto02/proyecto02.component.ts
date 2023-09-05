@@ -58,19 +58,6 @@ export class Proyecto02Component {
           before considering React. It's very
           tempting to jump ahead but lay a solid
           foundation first.`,
-        },
-        {
-          idAnswers: 1,
-          idUser: 2,
-          img: '../../../assets/img/proyect02/avatars/image-juliusomo.png',
-          nombre:'juliusomo',
-          time:"2 days ago",
-          comment:`@ramsesmiron | couldn't agree more
-          with this. Everything moves so fast
-          and it always seems like everyone
-          knows the newest library/framework.
-          But the fundamentals are what stay
-          constant.`,
         }
       ]
     },
@@ -82,18 +69,20 @@ export class Proyecto02Component {
     rtaComment: new FormControl('')
   });
 
+  miFormulario2:any = new FormGroup({
+    rtaCommentSend: new FormControl('')
+  });
+
   openButtonReply(item:any){
-    this.buttonReply = Number(item.id);
+   this.buttonReply = Number(item.id);
    console.log('el boton reply fue accionado con ID' + Number(item.id));
     
   }
 
-  enviarFormulario(item:any) {
-
+  enviarFormularioReply(item:any) {
     // Estoy recibiendo el item al apretar el boton enviar para sacar la posicion de la iteracion
     // la convierto a numero a indexComentario y le resto 1 ya que las iteraciones de ngfor comienzan en 1 y no en 0
     let indexComentario = Number(item.id)-1;
-
     let rtaComment = this.miFormulario.get('rtaComment').value;
 
     // aqui se almacena el comentario de respuesta del formulario
@@ -107,8 +96,8 @@ export class Proyecto02Component {
     answers.push({
       idAnswers: idAnswers,
       idUser: 2,
-      img: '../../../assets/img/proyect02/avatars/image-johnsmith.png',
-      nombre: 'johnsmith',
+      img: '',
+      nombre: '',
       time: '2 months ago',
       comment: respuesta.rtaComment,
     });
@@ -119,6 +108,31 @@ export class Proyecto02Component {
     console.log(this.comentarioUsuario);
     
     this.miFormulario.reset();
+    localStorage.setItem('respuestas', JSON.stringify(this.respuestas));
+  }
+
+  enviarFormularioSend() {
+    let lastId = this.comentarioUsuario.length > 0 ? this.comentarioUsuario[this.comentarioUsuario.length - 1].id : 0;
+    let rtaCommentSend = this.miFormulario2.get('rtaCommentSend').value;
+    let respuesta = {
+      rtaCommentSend: rtaCommentSend
+    };
+
+    this.comentarioUsuario.push({
+      id: lastId + 1,
+      img: '../../../assets/img/proyect02/avatars/image-juliusomo.png',
+      nombre: 'johnsmith',
+      time: '2 months ago',
+      comment: respuesta.rtaCommentSend,
+      answers: []
+    });
+    
+    // log console
+    this.respuestas.push(respuesta);
+    console.log("Esto viene del formulario SEND " + respuesta);
+    console.log("Esto viene del formulario SEND " + this.comentarioUsuario);
+    
+    this.miFormulario2.reset();
     localStorage.setItem('respuestas', JSON.stringify(this.respuestas));
   
   }
@@ -139,6 +153,4 @@ export class Proyecto02Component {
       }
     }
   }
-
-
 }

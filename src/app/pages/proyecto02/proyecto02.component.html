@@ -28,24 +28,35 @@
                         <h2 class="main_card__head-name">{{respuesta.time}}</h2>
                         
                     </div>
-                    <p>{{respuesta.comment}}</p>
+                    <textarea enabled>{{respuesta.comment}}</textarea>
                     <!-- ESTO TIENE QUE APARECER SOLAMENTE CUANDO UNO COMENTA -->
                     <!-- Esta validando que solo muestre el boton editar y eliminar cuando el ID sea igual a 2. el id es nuestro usuario  -->
                     <div *ngIf="respuesta.idUser == 2" class="container container-edit">
                         <div class="container_button-delete-edit">
                             <div (click)="eliminarRespuesta(respuesta.idAnswers)" class="container_delete"><img src="../../../assets/img/proyect02/icon-delete.svg" alt="">Delete</div>
-                            <div (click)="editarRespuesta(respuesta)" class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
+                            <div (click)="editarRespuesta(respuesta.idAnswers)" class="container_reply"><img src="../../../assets/img/proyect02/icon-edit.svg" alt="">Edit</div>
                         </div>
                     </div>
                 </article>
             </section>
-            <form [formGroup]="miFormulario" (submit)="enviarFormulario(item)" *ngIf="true" class="container_send">
+            <form [formGroup]="miFormulario" (submit)="enviarFormularioReply(item)" *ngIf="true" class="container_send">
                 <textarea id="rtaComment" name="rtaComment" formControlName="rtaComment" placeholder="Add a comment..." rows="4" cols="50"></textarea>
+                <div class="container_send-button-img">
+                    <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
+                    <button type="submit">REPLY</button>
+                </div>
+            </form>
+        </div>
+    </article>
+    <div class="container_comment">
+        <section class="container_card-reply">
+            <form [formGroup]="miFormulario2" (submit)="enviarFormularioSend()" class="container_send">
+                <textarea id="rtaCommentSend" name="rtaCommentSend" formControlName="rtaCommentSend" placeholder="Add a comment..." rows="4" cols="50"></textarea>
                 <div class="container_send-button-img">
                     <div><img src="../../../assets/img/proyect02/avatars/image-juliusomo.png" alt=""></div>
                     <button type="submit">SEND</button>
                 </div>
             </form>
-        </div>
-    </article>
+        </section>
+    </div>
 </section>
