@@ -29,7 +29,7 @@ export class ProyectsComponent {
       title: "Proyecto clon de pinterest",
       subtitle: "(En progreso)",
       description: "",
-      ruta: "/proyecto02"
+      ruta: ""
     }
     // {
     //   img: "../../../../assets/img/patron3.png",
