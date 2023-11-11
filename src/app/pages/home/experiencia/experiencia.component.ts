@@ -19,7 +19,7 @@ export class ExperienciaComponent {
   }
   experienciaObj = [
     {
-      title: "DISEÑADOR UX/UI",
+      title: "DESARROLLADOR UX/UI",
       company: "SII Group",
       description: "Responsable de la creación de maquetas en Angular con HTML semántico, SCSS metodología BEM y Typescript. Programación de funciones básicas y encargado de la Accesibilidad del proyecto. Además de brindar apoyo constante en distintas células"
     },
