@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FooterComponent {
 
-  urlPdf : string = 'assets/Bastian_CV.pdf';
+  urlPdf : string = 'assets/Bastian_Jorquera_CV.pdf';
   changeClase: boolean = false;
 
   constructor(private comunicacionService : ComuniacionService, private http: HttpClient){}
