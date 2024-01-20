@@ -21,16 +21,17 @@ export class NavComponent {
   modal: ModalComponent;
 
   titleModal: string = "Información importante";
-  descriptionModalMain: string = `Analista programador con experiencia en desarrollo de módulos. Experiencia
-  en Front-end utilizando Html5, JavaScript, CSS3, Bootstrap, además de contar
-  con conocimientos de librería react.js y Framework Angular. Experiencia en
-  Back-end con lenguaje php, java y node.js con express.js . Por otra parte,
-  experiencia con Base de datos Mysql y conocimiento Firebase. prototipado
-  con Figma. manejo de GIT y conocimientos básico UX/UI. Fortalezas, gran
-  capacidad de aprendizaje autónomo con el objetivo de buscar soluciones
-  eficientes e innovadoras, interés en la investigación e implementación de
-  mejoras constante a los procesos de trabajo, capacidad de ser ordenado y
-  organizado lo que facilita la labor.`;
+  descriptionModalMain: string = `Soy un Analista Programador con experiencia en el desarrollo Full-stack. Mi enfoque
+  se centra en la programación Front-end utilizando HTML5, JavaScript, CSS3 y
+  Bootstrap. Además, tengo sólidos conocimientos en el Framework Angular. En el
+  ámbito Back-end, cuento con experiencia en lenguajes como PHP, Java con Spring
+  boot y Node.js con Express.js. También he trabajado con bases de datos MySQL y
+  tengo conocimiento en Firebase. Soy competente en prototipado con Figma, manejo
+  eficazmente GIT y tengo conocimientos en UX/UI. Mi mayor fortaleza es mi
+  capacidad para aprender de manera autónoma, lo que me permite buscar soluciones
+  eficientes e innovadoras. Siempre estoy interesado en la investigación e
+  implementación de mejoras constantes en los procesos de trabajo, y mi habilidad
+  para ser ordenado y organizado facilita mis labores.`;
   descriptionModal: string = "Este sitio web está diseñado como portafolio con proyectos básicos. se está utilizando framework Angular 16 sin ningún framework de diseño. Cabe destacar que estará en constante actualización";
   isOpen: boolean = false;
   contrastActive: boolean = false;
