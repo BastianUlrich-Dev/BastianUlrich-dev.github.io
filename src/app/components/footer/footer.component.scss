@@ -10,13 +10,16 @@ ul{
     list-style: none;
     padding: 26px 0;
     gap: 24px;
+    button{
+        padding: 8px;
+        a img{
+            width: 20px;
+        }
+        span{
+            cursor: pointer;
+        }
+    }
 
-    a img{
-        width: 20px;
-    }
-    span{
-        cursor: pointer;
-    }
 }
 .ulContrast{
     filter: grayscale(1);

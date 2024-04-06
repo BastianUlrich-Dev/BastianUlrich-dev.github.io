@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FooterComponent {
 
-  urlPdf : string = 'assets/Bastian_Jorquera_CV.pdf';
+  urlPdf : string = 'assets/Bastian_Ulrich_Jorquera_Seron.pdf';
   changeClase: boolean = false;
 
   constructor(private comunicacionService : ComuniacionService, private http: HttpClient){}
@@ -18,6 +18,9 @@ export class FooterComponent {
     this.comunicacionService.clase$.subscribe(clase =>{
       this.changeClase = clase;      
     })
+  }
+  abrirEnlace(){
+    window.open('https://www.linkedin.com/in/bastian-ulrich-jorquera-seron-472a5a141/', '_blank');
   }
 
   descargarArchivoPDF() {

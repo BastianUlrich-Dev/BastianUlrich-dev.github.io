@@ -59,23 +59,19 @@
             border: 2px solid rgb(255 255 255 / 1%);
             box-shadow: 0 0 40px rgba(8, 7, 16, 0%);
 
-            a{
-                cursor: pointer;
-                padding: 16px 8px;  
+            button{
+                font-size: 1em;
+                padding: 16px 8px;
+                background-color: transparent;
+                border: none;
+                color: white;
             }
-            a:hover{
+
+            button:hover{
                 background-color: $color-highlight;
                 color: $color-font;
             }
 
-            &--animation{
-                animation: zoom 2s infinite;
-            }
-            @keyframes zoom {
-                0% { transform: scale(1.1)}
-                50%{ transform: scale(1.0)}
-                100%{ transform: scale(1.1)}
-              }
               @media (width > 939px){
                 width: 100%;
                 display: flex;
@@ -90,7 +86,6 @@
             .a_Contrast:hover{
                 background-color: $color-font;
                 color: $color-background-card;
-                font-weight: 800;
             }
         }
         &_list--active{

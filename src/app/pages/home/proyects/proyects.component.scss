@@ -12,7 +12,8 @@
     gap: 32px;
 
     &_card {
-        padding: 24px;
+        position: relative;
+        padding: 24px 24px 68px 24px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -31,8 +32,13 @@
             filter: grayscale(1);
         }
         &__link{
-            margin-top: 18px;
-            font-size: clamp(0.8125rem, 3vw, 1.5rem);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid white;
+            background-color: transparent;
+            padding: 10px;
         }
         @media (width > 480px) {
             width: 45%;
@@ -49,7 +55,7 @@
     }
 
     &_card:nth-child(2) {
-        background-color: $color-tertiary;
+        background-color: $color-blue;
         // .main_proyects__container_card__link{
         //     display: none;
         // }

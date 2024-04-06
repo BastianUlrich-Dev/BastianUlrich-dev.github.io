@@ -1,4 +1,4 @@
-import { Component, Renderer2, ElementRef, RendererStyleFlags2  } from '@angular/core';
+import { Component, Renderer2, ElementRef} from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { HttpClient } from '@angular/common/http';
 import { ComuniacionService } from 'src/app/services/comuniacion.service';
@@ -60,21 +60,12 @@ export class NavComponent {
     }
   }
 
-  // aumentarSize(){
-  //   if (this.fontSize < 120) {
-  //     this.fontSize += 10;
-  //     this.renderer.setStyle(document.body, 'font-size', `${this.fontSize}%`);
-  //   }
-  // }
-  // disminuirSize(){
-  //   if (this.fontSize > 80) {
-  //     this.fontSize -= 10;
-  //     this.renderer.setStyle(document.body, 'font-size', `${this.fontSize}%`);
-  //   }
-  // }
-
   activeMenuAccesibility(){
     this.buttonAccesibility = !this.buttonAccesibility;
+  }
+
+  scrollTo(id: string): void {
+    this.comunicacionService.scrollToElement(id);
   }
 
   activeMenu(){

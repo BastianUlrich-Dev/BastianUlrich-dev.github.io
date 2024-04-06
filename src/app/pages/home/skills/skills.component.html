@@ -1,24 +1,16 @@
-<h1 id="idSkills" class="main_title title-margin-top">SKILLS</h1>
+<h2 id="idSkills" class="main_title title-margin-top">SKILLS</h2>
 <section class="main_portada__skill">
     <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
         <div class="container_img">
             <img class="imgFilter" src="{{item.img}}" alt="">
-            <div [ngClass]="{'percentageContrast': changeClase}" class="percentage percentage--{{item.title}}">
+            <div aria-hidden="true" [ngClass]="{'percentageContrast': changeClase}" class="percentage percentage--{{item.title}}">
                 <span class="main_description">{{item.percentage}}</span>
             </div>
         </div>
         <div class="container_description">
-            <h2 class="main_subtitle">{{item.title | uppercase}}</h2>
-            <p class="main_description main_description--colorGray" [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
+            <h3 class="main_subtitle">{{item.title | uppercase}}</h3>
+            <p aria-hidden="true" [attr.aria-label]="'item.description'+'item.percentage'+ 'de'" class="main_description main_description--colorGray" [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
+            <div class="a11y">{{item.description}} {{item.percentage}} de conocimiento. </div>
         </div>
     </article>
-    <div class="divShadow" *ngIf="divShadown">
-        <img class="divShadow_img" src="../../../../assets/img/gorila.jpg">
-    </div>
-    <button (click)="activarEgg1()" id="div1" class="ebutton div1" [disabled]="begg1"></button>
-    <button (click)="activarEgg4()" id="div4" class="ebutton div4" [disabled]="begg4"></button>
-    <button (click)="activarEgg5()" id="div5" class="ebutton div5" [disabled]="begg5"></button>
-    <button (click)="activarEgg6()" id="div6" class="ebutton div6" [disabled]="begg6"></button>
-    <button (click)="activarEgg3()" id="div3" class="ebutton div3" [disabled]="begg3"></button>
-    <button (click)="activarEgg2()" id="div2" class="ebutton div2" [disabled]="begg2"></button>
 </section>

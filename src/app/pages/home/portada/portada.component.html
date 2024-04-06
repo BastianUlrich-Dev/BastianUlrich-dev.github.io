@@ -6,10 +6,10 @@
             <!-- <button class="main_portada__info-main__name_button" (click)="abrirModal()">Mas detalles</button> -->
         </article>
         <article [ngClass]="{'main_portada__info-main__imgContrast': changeClase}" class="main_portada__info-main__img">
-            <img src="{{imgProfile}}" alt="">
+            <img alt="Foto de perfil" src="{{imgProfile}}" alt="">
         </article>
     </section>
-    <div class="main_title container-saludo">
+    <div aria-hidden="true" class="main_title container-saludo">
         <p class="saludo">Hello world!</p>
     </div>
 </article>

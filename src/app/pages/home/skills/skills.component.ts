@@ -20,25 +20,25 @@ export class SkillsComponent {
   skillObj = [
     {
       img: "../../../assets/img/html.png",
-      percentage: "90%",
+      percentage: "68%",
       title: "html",
       description: "Semántico y con accesibilidad"
     },
     {
       img: "../../../assets/img/css3.png",
-      percentage: "85%",
+      percentage: "70%",
       title: "css",
       description: "Metodología BEM y enfoque mobile first"
     },
     {
       img: "../../../assets/img/typescript.png",
-      percentage: "67%",
+      percentage: "50%",
       title: "typescript",
       description: "Buenas practicas y usos de nuevas características"
     },
     {
       img: "../../../assets/img/angular.png",
-      percentage: "70%",
+      percentage: "57%",
       title: "angular",
       description: "Maquetación y creación  de proyectos reactivos y con enrutamiento"
     },

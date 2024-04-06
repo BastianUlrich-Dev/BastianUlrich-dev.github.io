@@ -11,7 +11,7 @@ export class ModalComponent {
   constructor(private renderer: Renderer2, private http: HttpClient) {
 
   }
-  urlPdf : string = 'assets/Bastian_Jorquera_CV.pdf';
+  urlPdf : string = 'assets/Bastian_Ulrich_Jorquera_Seron.pdf';
   @Input() title :string = "";
   @Input() maindescription: string = "";
   @Input() description :string = "";

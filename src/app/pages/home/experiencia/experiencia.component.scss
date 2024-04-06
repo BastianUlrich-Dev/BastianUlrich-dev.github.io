@@ -18,11 +18,14 @@
         }
         &__title{
             color: $color-font;
-            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-size: clamp(1.5em, 3vw, 2em);
         }
         &__subtitle, &__description{
             color: $color-font;
-            font-size: clamp(0.8125rem, 3vw, 1.5rem);
+            font-size: clamp(0.8125em, 3vw, 1.5em);
+        }
+        &__description--margin-top{
+            margin-top: 8px;
         }
     }
     &_cardContrast{
@@ -38,10 +41,10 @@
         background-color: $color-highlight;
     }
     &_card:nth-child(2){
-        background-color: $color-tertiary;
+        background-color: $color-blue;
     }
     &_card:nth-child(3){
-        background-color: $color-subtitle;
+        background-color: $color-green;
     }
     &_card:last-child{
         padding: 0;

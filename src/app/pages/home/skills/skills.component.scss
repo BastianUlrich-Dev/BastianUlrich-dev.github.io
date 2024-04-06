@@ -1,4 +1,15 @@
 @import '../../../../assets/styles/colors';
+.a11y{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .title-margin-top{
     padding-top: 59px;
     text-align: center;
@@ -45,32 +56,29 @@
                 position: absolute;
                 bottom: -26px;
                 left: 79px;
+                background-color: #000000b3;
                 &--html{
-                    background: #d9376d6e;
-                    border: 3px solid #d9376e;
+                    border: 3px solid #f91764;
                     span{
-                        color: #d9376e;
+                        color: #f91764;
                     }
                 }
                 &--css{
-                    background: rgb(107 128 0 / 28%);
-                    border: 3px solid #718000;
+                    border: 3px solid #7f9000;
                     span{
-                        color: #718000;
+                        color: #7f9000;
                     }
                 }
                 &--typescript{
-                    background: rgb(0 74 128 / 44%);
-                    border: 3px solid #00806e;
+                    border: 3px solid #009e88;
                     span{
-                        color: #00806e;
+                        color: #009e88;
                     }
                 }
                 &--angular{
-                    background: #d937376e;
-                    border: 3px solid #d93737;
+                    border: 3px solid #fc1414;
                     span{
-                        color: #d93737;
+                        color: #fc1414;
                     }
                 }
                 @media (width > 480px) {
