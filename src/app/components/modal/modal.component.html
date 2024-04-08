@@ -1,13 +1,22 @@
-<section [ngClass]="{'container_modalContrast': !contrastActive}" class="container_modal">
-    <article [ngClass]="{'modalContrast': !contrastActive}" class="modal">
-        <button aria-label="Boton cerrar modal" (click)="toggleModal()" class="modal_close material-symbols-outlined">close</button>
-        <h4 class="main_title main_title--margin-bottom">{{title}}</h4>
-            <section class="modal__description">
-                <p class="main_description"><span (click)="descargarArchivoPDF()" class="icon_cv">Puedes descargar mi CV aquí<span class=" material-symbols-outlined">
-                    archive
-                </span></span><br>{{maindescription}}</p>
-                <br>
-                <p class="main_description">{{description}}.</p>
-            </section>
-    </article>
+<section cdkTrapFocus [cdkTrapFocusAutoCapture]="true" role="dialog"
+  [ngClass]="{'container_modalContrast': !contrastActive}" class="container_modal">
+  <article [ngClass]="{'modalContrast': !contrastActive}" class="modal">
+    <button aria-label="Cerrar modal" (click)="toggleModal()" class="modal_close">
+        <div aria-hidden="true" class="material-symbols-outlined">close</div>
+      </button>
+    <h4 tabindex="0" class="main_title main_title--margin-bottom">{{title}}</h4>
+    <section class="modal__description">
+      <p  class="main_description">
+        <button tabindex="0" (click)="descargarArchivoPDF()" class="icon_cv">Puedes descargar mi currículum aquí
+          <span aria-hidden="true" class=" material-symbols-outlined">
+            archive
+          </span>
+        </button>
+        <br aria-hidden="true">
+        <span tabindex="0">{{maindescription}}</span>
+      </p>
+      <br>
+      <p tabindex="0" class="main_description">{{description}}.</p>
+    </section>
+  </article>
 </section>

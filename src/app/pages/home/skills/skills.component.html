@@ -1,16 +1,12 @@
-<h2 id="idSkills" class="main_title title-margin-top">SKILLS</h2>
+<h2 id="idSkills" class="main_title title-margin-top">SKILLS FRONT-END</h2>
 <section class="main_portada__skill">
     <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
         <div class="container_img">
             <img class="imgFilter" src="{{item.img}}" alt="">
-            <div aria-hidden="true" [ngClass]="{'percentageContrast': changeClase}" class="percentage percentage--{{item.title}}">
-                <span class="main_description">{{item.percentage}}</span>
-            </div>
         </div>
         <div class="container_description">
             <h3 class="main_subtitle">{{item.title | uppercase}}</h3>
             <p aria-hidden="true" [attr.aria-label]="'item.description'+'item.percentage'+ 'de'" class="main_description main_description--colorGray" [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
-            <div class="a11y">{{item.description}} {{item.percentage}} de conocimiento. </div>
         </div>
     </article>
 </section>

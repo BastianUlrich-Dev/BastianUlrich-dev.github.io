@@ -24,6 +24,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: 32px 0 0;
     
     &_card{
         display: flex;
@@ -39,62 +40,12 @@
             flex-direction: column;
             .imgFilter{
                 width: 75%;
-                filter: grayscale(100%);
+                // filter: grayscale(100%);
                 opacity: 70%;
                 margin: 0 auto;
                 @media (width > 480px){
                     width: 85px
                 }
-            }
-            .percentage{
-                width: 50px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                position: absolute;
-                bottom: -26px;
-                left: 79px;
-                background-color: #000000b3;
-                &--html{
-                    border: 3px solid #f91764;
-                    span{
-                        color: #f91764;
-                    }
-                }
-                &--css{
-                    border: 3px solid #7f9000;
-                    span{
-                        color: #7f9000;
-                    }
-                }
-                &--typescript{
-                    border: 3px solid #009e88;
-                    span{
-                        color: #009e88;
-                    }
-                }
-                &--angular{
-                    border: 3px solid #fc1414;
-                    span{
-                        color: #fc1414;
-                    }
-                }
-                @media (width > 480px) {
-                    position: initial;
-                    margin: 0 auto;
-                    scale: 1.5;
-                    margin: -18px 0 0 52px;
-                }
-            }
-            .percentageContrast{
-                    background-color: black;
-                    border: 2px solid white;
-                    span{
-                            color: white;
-                            letter-spacing: 1px;
-                    }
             }
         }
         @media (width > 480px) {
@@ -116,71 +67,4 @@
         justify-content: center;
     }
 
-    .divShadow{
-        position: absolute;
-        top: 35%;
-        left: 0;
-        text-align: center;
-        .divShadow_img{
-            width: 100%;
-            margin: 0 auto;
-            @media (width> 480px) {
-                width: 64%;
-                margin: 0 auto;
-            }
-    }
-    @media (width> 480px) {
-        position: absolute;
-        top: 0%;
-        left: 0;
-        text-align: center;
-    }
-    // EGG
-    }
-
-    .ebutton{
-        border: none;
-        background-color: transparent;
-    }
-    .div1{
-        position: absolute;
-        left: 0;
-        width: 10px;
-        height: 10%;
-    }
-    .div2{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 10px;
-        height: 10%;
-    }
-    .div3{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 10px;
-        height: 10%;
-    }
-    .div4{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 10px;
-        height: 10%;
-    }
-    .div5{
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 10px;
-        height: 10%;
-    }
-    .div6{
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 10px;
-        height: 10%;
-    }
 }

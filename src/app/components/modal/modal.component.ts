@@ -5,7 +5,7 @@ import { Component, Input, Output, EventEmitter, Renderer2 } from '@angular/core
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
   constructor(private renderer: Renderer2, private http: HttpClient) {

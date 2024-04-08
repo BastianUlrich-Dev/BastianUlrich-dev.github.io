@@ -34,8 +34,12 @@
             @media (width> 480px){
             }
             .icon_cv{
+                background-color: transparent;
+                color: white;
+                border: none;
                 display: flex;
-                cursor: pointer;
+                font-size: 1em;
+                align-items: center;
             }
         }
     }  
