@@ -8,7 +8,7 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-family: monospace;
+    font-family: monospace !important;
     background-color: $color-background-card;
     font-size: 100%;
     color: $color-font;
@@ -45,3 +45,6 @@ p{
     color: $color-font;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

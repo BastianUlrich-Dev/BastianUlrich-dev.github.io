@@ -1,42 +1,43 @@
 <nav class="main_nav">
     <section [ngClass]="{'menu_contrast': !navContrast}" class="main_nav__menu">
     </section>
+        <!-- BOTON MENU DE A11Y -->
+            <button id="buttonMenuA11y" (click)="activeMenuAccesibility()" class="main_nav__menu_contrast">
+                <div aria-hidden="true" class="material-symbols-outlined">
+                    accessibility_new
+                </div>
+                Accesibilidad
+            </button>
+            <article class="main_nav__menu_list main_nav__menu_list--accesibility" [ngClass]="{'main_nav__menu_list--accesibility--active': !buttonAccesibility, 'main_nav__menu_list--accesibility--activeContrast': !navContrast}">
+                <button [ngClass]="{'a_Contrast': !navContrast}" (click)="activeContrast()" class="main_nav__menu_list--accesibility__contrast">
+                    <div aria-hidden="true" class="material-symbols-outlined">
+                        contrast
+                    </div>
+                    Dark mode
+                </button>
+                <button [ngClass]="{'a_Contrast': !navContrast}" (click)="aumentarSize()" class="main_nav__menu_list--accesibility__contrast">
+                    <div aria-hidden="true" class="material-symbols-outlined">
+                        text_increase
+                    </div>
+                    Ascender
+                </button>
+                <button [ngClass]="{'a_Contrast': !navContrast}" (click)="disminuirSize()" class="main_nav__menu_list--accesibility__contrast">
+                    <div aria-hidden="true" class="material-symbols-outlined">
+                        text_decrease
+                    </div>
+                    Descender
+                </button>
+            </article>
+        <button (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</button>
     <article [ngClass]="{'main_nav__menu_list--active': !buttonMenu, 'main_nav__menu_list--activeContrast': !navContrast}" class="main_nav__menu_list">
-        <button [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idPortada')">Inicio</button>
-        <button [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idExperiencia')">Experiencia</button>
-        <button [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idSkills')">Skills</button>
-        <button [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idProyects')">Mis proyectos</button>
-        <button href="#" [ngClass]="{'a_Contrast': !navContrast}" (click)="abrirModal()" class="main_nav__menu_list--animation">Información de la web</button>
+        <button class="main_nav__menu_list__button" [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idPortada')">Inicio</button>
+        <button class="main_nav__menu_list__button" [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idExperiencia')">Experiencia</button>
+        <button class="main_nav__menu_list__button" [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idSkills')">Skills</button>
+        <button class="main_nav__menu_list__button" [ngClass]="{'a_Contrast': !navContrast}" (click)="scrollTo('idProyects')">Mis proyectos</button>
+        <button class="main_nav__menu_list__button" href="#" [ngClass]="{'a_Contrast': !navContrast}" (click)="abrirModal()">Información de la web</button>
     </article>
-    <article class="main_nav__menu_list main_nav__menu_list--accesibility" [ngClass]="{'main_nav__menu_list--accesibility--active': !buttonAccesibility, 'main_nav__menu_list--accesibility--activeContrast': !navContrast}">
-        <section (click)="activeContrast()" class="main_nav__menu_list--accesibility__contrast">
-            <div class="material-symbols-outlined">
-                contrast
-            </div>
-            Contraste
-        </section>
-        <section (click)="aumentarSize()" class="main_nav__menu_list--accesibility_text main_nav__menu_list--accesibility__contrast">
-            <div class="material-symbols-outlined">
-                text_increase
-            </div>
-            Ascender
-        </section>
-        <section (click)="disminuirSize()" class="main_nav__menu_list--accesibility_text main_nav__menu_list--accesibility__contrast">
-            <div class="material-symbols-outlined">
-                text_decrease
-            </div>
-            Descender
-        </section>
-    </article>
-    <!-- BOTON MENU DE A11Y -->
-    <article (click)="activeMenuAccesibility()" class="main_nav__menu_contrast">
-        <div class="material-symbols-outlined">
-            accessibility_new
-        </div>
-        Accesibilidad
-    </article>
+
     <!-- BOTON MENU OPCIONES -->
-    <div (click)="activeMenu()" class="main_nav__menu_button material-symbols-outlined">menu</div>
 </nav>
 <section *ngIf="isOpen">
     <app-modal (closeModal)="cerrarModal($event)" [title]="titleModal" [maindescription]="descriptionModalMain" [description]="descriptionModal" [isOpen]="isOpen" [contrastActive]="navContrast"></app-modal>

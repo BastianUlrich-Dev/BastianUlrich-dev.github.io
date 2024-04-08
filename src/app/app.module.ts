@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SkillsComponent } from './pages/home/skills/skills.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
+import { A11yModule } from '@angular/cdk/a11y';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    A11yModule
   ],
   providers: [],
   bootstrap: [AppComponent]

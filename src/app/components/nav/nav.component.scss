@@ -16,6 +16,8 @@
         border: 2px solid rgba(255,255,255,.01);
         box-shadow: 0 0 40px #08071000;
         &_contrast{
+            border: none;
+            background-color: transparent;
             position: absolute;
             color: $color-font;
             left: 0;
@@ -23,13 +25,17 @@
             cursor: pointer;
             display: flex;
             margin: 0 0 0 5%;
-            border-radius: 50%;
             align-items: center;
             justify-content: center;
+            font-size: 1em;
+            z-index: 1;
+
         }
         &_button{
             cursor: pointer;
-            width: 25px;
+            background-color: transparent;
+            border: none;
+            // width: 25px;
             margin: 0;
             height: inherit;
             position: absolute;
@@ -59,7 +65,7 @@
             border: 2px solid rgb(255 255 255 / 1%);
             box-shadow: 0 0 40px rgba(8, 7, 16, 0%);
 
-            button{
+            &__button{
                 font-size: 1em;
                 padding: 16px 8px;
                 background-color: transparent;
@@ -113,9 +119,23 @@
             box-shadow: 0 0 40px rgba(8, 7, 16, 0%);
 
             &__contrast{
+                align-items: center;
+                font-size: 1em;
+                padding: 16px 8px;
+                background-color: transparent;
+                border: none;
+                margin: 0;
+                color: white;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
+                div{
+                    margin: 0 auto;
+                }
+                @media (width < 939px) {
+                    width: 100%;
+                    
+                }
             }
             &_text{
                 width: 100%;
@@ -193,11 +213,12 @@
                 top: 30%;
             }
         }
-    &--active{
-        display: initial;
-        overflow: hidden;
+        &--active{
+            display: initial;
+            overflow: hidden;
+        }
     }
-  
-      
+    @media (width > 939px){
+        align-items: center;
     }
 }

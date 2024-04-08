@@ -40,7 +40,7 @@ export class SkillsComponent {
       img: "../../../assets/img/angular.png",
       percentage: "57%",
       title: "angular",
-      description: "Maquetación y creación  de proyectos reactivos y con enrutamiento"
+      description: "Maquetación y creación  de proyectos reactivos con enrutamiento"
     },
   ]
   imgProfile:string = "../../../assets/img/imgprofile.png";
