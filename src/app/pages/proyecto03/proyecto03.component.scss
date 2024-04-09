@@ -1,0 +1,139 @@
+@import '../../../assets/styles/colors';
+
+.main_container{
+    width: 100%;
+    height: 100vh;
+    background-color: $color-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form{
+        display: flex;
+        margin: 8px 0;
+        gap: 8px;
+    
+        input{
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+        }
+        button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+    .container{
+        background-color: $color-green;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px $color-background-card;
+        @media (width < 425px) {
+            width: 100%;
+            margin: 10px;
+        }
+        .upper-data{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .weather-data{
+                position: relative;
+                z-index: 1;
+                padding: 30%;
+                width: 100%;
+                height: 100%;
+                background-color: #16161a80;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .location{
+                    color: white;
+                    text-align: center;
+                    font-size: 1.2em;
+                }
+                .temperature{
+                    color: white;
+                    font-size: 4em;
+                    text-align: center;
+                    font-weight: 900;
+                }
+            }
+        }
+        .lower-data{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            .more-info-label{
+                color: white;
+            }
+            .more-info-container{
+                gap: 12px;
+                padding: 16px;
+                background-color: rgba(22, 22, 26, 0.5019607843);
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                margin-top: 1em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                @media (width < 401px) {
+                    flex-direction: column;
+                }
+                .info-block{
+                    width: 48%;
+                    display: flex;
+                    flex-direction: row;
+                    @media (width < 401px) {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    .info-block-label{
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        @media (width < 401px) {
+                            width: initial;
+                        }
+                        img{
+                            width: 3em;
+                            filter: invert(1);
+                        }
+                        span{
+                            color: white;
+                            font-size: 1em;
+                        }
+                    }
+                    .info-block-value{
+                        width: 50%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        color: white;
+                        @media (width < 401px) {
+                            width: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

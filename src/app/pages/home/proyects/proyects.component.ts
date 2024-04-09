@@ -25,18 +25,18 @@ export class ProyectsComponent {
       ruta: "/proyecto01"
     },
     {
-      img: "../../../../assets/img/patron2.png",
-      title: "Proyecto CRUD",
+      img: "../../../../assets/img/patron3.png",
+      title: "Proyecto CLIMA",
       subtitle: "(En progreso)",
       description: "",
-      ruta: ""
-    }
+      ruta: "/proyecto03"
+    },
     // {
-    //   img: "../../../../assets/img/patron3.png",
-    //   title: "Proyecto 03",
+    //   img: "../../../../assets/img/patron2.png",
+    //   title: "Proyecto CRUD",
     //   subtitle: "(En progreso)",
     //   description: "",
-    //   ruta: "/proyecto03"
+    //   ruta: "/proyecto02"
     // },
     // {
     //   img: "../../../../assets/img/patron4.png",
