@@ -1,4 +1,4 @@
-<h2 tabindex="0" id="idSkills" class="main_title title-margin-top">SKILLS FRONT-END</h2>
+<h2 id="idSkills" class="main_title title-margin-top">SKILLS FRONT-END</h2>
 <section class="main_portada__skill">
     <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
         <div class="container_img">
@@ -6,7 +6,7 @@
         </div>
         <div class="container_description">
             <h3 class="main_subtitle">{{item.title | uppercase}}</h3>
-            <p [attr.aria-label]="'item.description'+'item.percentage'+ 'de'" class="main_description main_description--colorGray" [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
+            <p class="main_description main_description--colorGray" [ngClass]="{'container_descriptionContrast': changeClase}">{{item.description}}.</p>
         </div>
     </article>
 </section>

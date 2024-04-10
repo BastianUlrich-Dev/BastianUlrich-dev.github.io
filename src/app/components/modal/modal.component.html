@@ -6,17 +6,15 @@
       </button>
     <h2 tabindex="0" class="main_title main_title--margin-bottom">{{title}}</h2>
     <section class="modal__description">
-      <p  class="main_description">
-        <button tabindex="0" (click)="descargarArchivoPDF()" class="icon_cv">Puedes descargar mi currículum aquí
-          <span aria-hidden="true" class=" material-symbols-outlined">
-            archive
-          </span>
-        </button>
+      <button tabindex="0" (click)="descargarArchivoPDF()" class="icon_cv">Puedes descargar mi currículum aquí
+        <span aria-hidden="true" class=" material-symbols-outlined">
+          archive
+        </span>
+      </button>
         <br aria-hidden="true">
-        <span tabindex="0">{{maindescription}}</span>
-      </p>
-      <br>
-      <p tabindex="0" class="main_description">{{description}}.</p>
+        <p class="main_description" tabindex="0">{{maindescription}}</p>
+        <br aria-hidden="true">
+        <p tabindex="0" class="main_description">{{description}}.</p>
     </section>
   </article>
 </section>
