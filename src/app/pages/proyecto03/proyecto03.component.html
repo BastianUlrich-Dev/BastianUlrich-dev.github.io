@@ -1,5 +1,5 @@
 <div class="main_container">
-    <h3>Busca tu ciudad</h3>
+    <h2 tabindex="0" aria-hidden="false" role="heading">Busca tu ciudad</h2>
     <form action="">
         <input type="text" placeholder="Digita una ciudad" name="cityName"[(ngModel)]="city">
         <button type="button" (click)="getWeather();">Buscar</button>
@@ -9,8 +9,11 @@
             <img *ngIf="weatherData.main.temp>15" src="../../../assets/img/proyect03/atardecer-en-verano.avif" alt="">
             <img *ngIf="weatherData.main.temp<15.84" src="../../../assets/img/proyect03/atardecer-frio-con-m.avif" alt="">
             <section class="weather-data">
-                <article class="location">{{weatherData.name}}</article>
-                <article class="temperature">{{weatherData.main.temp | number:'1.0-0'}}°</article>
+                <article  class="location">{{weatherData.name}}</article>
+                <article aria-hidden="true" class="temperature">{{weatherData.main.temp | number:'1.0-0'}}°</article>
+                <div class="a11y">
+                    {{weatherData.main.temp | number:'1.0-0'}} grados.
+                </div>
                 <article class="location">{{weatherData.weather[0].description}}</article>
             </section>
         </article>
@@ -21,41 +24,65 @@
 
             <div class="more-info-container">
                 <div class="info-block">
-                    <div class="info-block-label">
-                        <img src="../../../assets/img/proyect03/thermometer-cold-stroke-rounded.svg" alt="">
-                        <span>min</span>
+                    <div class="a11y">
+                        Temperatura mínima.
                     </div>
-                    <div class="info-block-value">
+                    <div aria-hidden="true" class="info-block-label">
+                        <img src="../../../assets/img/proyect03/thermometer-cold-stroke-rounded.svg" alt="">
+                        <p>min</p>
+                    </div>
+                    <div aria-hidden="true" class="info-block-value">
                         {{weatherData.main.temp_min| number:'1.0-0'}}°C
                     </div>
+                    <div class="a11y">
+                        {{weatherData.main.temp_min | number:'1.0-0'}} grados.
+                    </div>
                 </div>
 
                 <div class="info-block">
-                    <div class="info-block-label">
-                        <img src="../../../assets/img/proyect03/thermometer-warm-stroke-rounded.svg" alt="">
-                        <span>max</span>
+                    <div class="a11y">
+                        Temperatura máxima.
                     </div>
-                    <div class="info-block-value">
+                    <div aria-hidden="true" class="info-block-label">
+                        <img  src="../../../assets/img/proyect03/thermometer-warm-stroke-rounded.svg" alt="">
+                        <p>max</p>
+                    </div>
+                    <div aria-hidden="true" class="info-block-value">
                         {{weatherData.main.temp_max| number:'1.0-0'}}°C
                     </div>
+                    <div class="a11y">
+                        {{weatherData.main.temp_max | number:'1.0-0'}} grados.
+                    </div>
                 </div>
 
                 <div class="info-block">
-                    <div class="info-block-label">
-                        <img src="../../../assets/img/proyect03/humidity-stroke-rounded.svg" alt="">
-                        <span>Humedad</span>
+                    <div class="a11y">
+                        Humedad actual.
                     </div>
-                    <div class="info-block-value">
+                    <div aria-hidden="true" class="info-block-label">
+                        <img  src="../../../assets/img/proyect03/humidity-stroke-rounded.svg" alt="">
+                        <p>Humedad</p>
+                    </div>
+                    <div aria-hidden="true" class="info-block-value">
                         {{weatherData.main.humidity}}%
+                    </div>
+                    <div class="a11y">
+                        {{weatherData.main.humidity}}porciento.
                     </div>
                 </div>
                 <div class="info-block">
-                    <div class="info-block-label">
-                        <img src="../../../assets/img/proyect03/slow-winds-stroke-rounded.svg" alt="">
-                        <span>viento</span>
+                    <div class="a11y">
+                        Viento actual.
                     </div>
-                    <div class="info-block-value">
+                    <div aria-hidden="true" class="info-block-label">
+                        <img src="../../../assets/img/proyect03/slow-winds-stroke-rounded.svg" alt="">
+                        <p>viento</p>
+                    </div>
+                    <div aria-hidden="true" class="info-block-value">
                         {{weatherData.wind.speed}}km/h
+                    </div>
+                    <div class="a11y">
+                        {{weatherData.wind.speed}}kilometros por hora.
                     </div>
                 </div>
             </div>

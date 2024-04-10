@@ -3,6 +3,7 @@
     <article [ngClass]="{'main_proyects__container_cardContrast': changeClase}" *ngFor="let item of proyectsObj" class="main_proyects__container_card">
         <div [ngClass]="{'container_imgContrast': changeClase}" class="container_img">
             <img alt="" src="{{item.img}}">
+            <div class="backgroundImg"></div>
         </div>
         <h3 class="main_subtitle">{{item.title}}</h3>
         <p class="main_description">{{item.subtitle}}</p>
