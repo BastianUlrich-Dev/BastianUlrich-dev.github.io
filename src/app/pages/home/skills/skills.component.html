@@ -1,6 +1,6 @@
 <h2 id="idSkills" class="main_title title-margin-top">SKILLS FRONT-END</h2>
-<section class="main_portada__skill">
-    <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card">
+<section [ngClass]="{'container_modalContrast': changeClase}" class="main_portada__skill">
+    <article *ngFor="let item of skillObj; let index = index" class="main_portada__skill_card ">
         <div class="container_img">
             <img class="imgFilter" src="{{item.img}}" alt="">
         </div>

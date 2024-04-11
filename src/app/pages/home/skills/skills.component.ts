@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ComuniacionService } from 'src/app/services/comuniacion.service';
 
 @Component({
@@ -17,6 +17,7 @@ export class SkillsComponent {
       
     })
   }
+  // @Input() contrastActive: boolean = false;
   skillObj = [
     {
       img: "../../../assets/img/html.png",

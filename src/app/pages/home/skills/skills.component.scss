@@ -17,7 +17,9 @@
 .main_description--colorGray{
    color: $color-subtitle;
 }
-
+.container_modalContrast{
+    filter: grayscale(1);
+}
 .main_portada__skill{
     padding: 0 20%;
     gap: 24px;
@@ -66,5 +68,4 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-
 }
