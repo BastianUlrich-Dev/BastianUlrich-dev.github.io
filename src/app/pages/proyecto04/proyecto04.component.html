@@ -4,14 +4,22 @@
                 <img src="../../../assets/img/proyecto04/letranetflix.png" alt="Logo de netflix">
             </section>
             <section class="main_container-header_buttons">
-                <button>Español</button>
+                <div class="container_select">
+                    <img src="../../../assets/img/proyecto04/language-square-stroke-rounded.svg" alt="">
+                    <select>
+                        <option lang="es" label="Español" value="es-CL">Español</option>
+                        <option lang="en" label="English" value="en-CL">English</option>
+                    </select>
+                </div>
                 <button>Iniciar sesión</button>
             </section>
         </article>
     <article class="main_container-cards">
         <section class="main_container-cards_card">
                 <article class="main_container-cards_card-background">
-                    <img src="../../../assets/img/proyecto04/foto_hero.jpg" alt="">
+                    <div class="container_image">
+                        <img src="../../../assets/img/proyecto04/foto_hero.jpg" alt="">
+                    </div>
                     <div class="background-black"></div>
                     <div class="background-black"></div>
                 </article>   
@@ -19,9 +27,12 @@
             <article class="main_container-cards_card-title">
                 <h1>Películas y series ilimitadas y mucho más</h1>
                 <p>Disfruta donde quieras. Cancela cuando quieras.</p>
-                <p>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</p>
                 <form action="#">
-                    <input type="text" name="email" id="email">
+                    <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</h3>
+                    <div class="container_input">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
                     <button>Comenzar ></button>
                 </form>
             </article>
