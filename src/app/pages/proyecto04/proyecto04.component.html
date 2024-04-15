@@ -49,7 +49,7 @@
                         <img src="../../../assets/img/proyecto04/tv.png" alt="">
                         <div class="container-main_img-content_video">
                             <video autoplay playsinline mute loop>
-                                <source src="../../../assets/img/proyecto04/video-tv-0819.m4v" type="video/mp4">
+                                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                         <img src="../../../assets/img/proyecto04/device-pile.png" alt="">
                         <div class="container-main_img-content_video container-main_img-content_video--short">
                             <video autoplay playsinline mute loop>
-                                <source src="../../../assets/img/proyecto04/video-devices.m4v" type="video/mp4">
+                                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -113,29 +113,32 @@
                 <div class="separador"></div>
             </article>
         </section>
-        <!-- SEXTA CARD -->
-        <section class="main_container-cards_card main_container-cards_card--padding-3">
-            <article class="main_container-cards_card-title">
-                <h2>Preguntas frecuentes</h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <button>
-                                <p>¿Qué es Netflix</p>
-                                <img src="https://cdn.hugeicons.com/icons/multiplication-sign-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36" alt="" width="36" height="36" />
-                                <img src="https://cdn.hugeicons.com/icons/add-01-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36" alt="" width="36" height="36" />
-                            </button>
-                            <section>
-                                <p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y documentales premiados en casi cualquier pantalla conectada a internet. <br aria-hidden="true"> <br aria-hidden="true"> Todo lo que quieras ver, sin límites ni comerciales, a un costo muy accesible. Siempre hay algo nuevo por descubrir, ¡y todas las semanas se agregan más películas y series!</p>
+        <!-- Cards información -->
+        <section class="main_container-cards_card main_container-cards_info min-hight-none">
+            <article class="container_button-main">
+                <h2 class="container_button-main_title">Preguntas frecuentes</h2>
+                <div class="container_ul">
+                    <ul *ngFor="let item of listInfo; let i = index">
+                        <li>
+                            <h3 (click)="activarButtonInfo(i)" class="container_button-description">
+                                <button class="container_button-description_button">
+                                    <p>{{item.title}}</p>
+                                    <img *ngIf="buttonInfo !== i" class="icon_close" src="https://cdn.hugeicons.com/icons/multiplication-sign-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36" alt="" width="28" height="28" />
+                                    <img *ngIf="buttonInfo === i" class="icon_plus" src="https://cdn.hugeicons.com/icons/add-01-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36" alt="" width="28" height="28" />
+                                </button>
+                            </h3>
+                            <section [ngClass]="buttonInfo !== i ? 'container_button-description_content': 'container_button-description_content-open'">
+                                <p>{{item.description}}<br/><br/>{{item.description2}}</p>
                             </section>
-                        </h3>
-                    </li>
-
-                </ul>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="separador"></div>
             </article>
         </section>
     </article>
-    <article class="main_container-footer"></article>
+    <article class="main_container-footer">
+        <p>clon de Netflix por Bastian Ulrich</p>
+    </article>
 </section>
