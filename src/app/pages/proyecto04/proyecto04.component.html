@@ -1,144 +1,195 @@
 <section class="main_container">
-        <article class="main_container-header">
-            <section class="main_container-header_logo">
-                <img src="../../../assets/img/proyecto04/letranetflix.png" alt="Logo de netflix">
-            </section>
-            <section class="main_container-header_buttons">
+  <article class="main_container-header">
+    <section class="main_container-header_logo">
+      <img src="../../../assets/img/proyecto04/letranetflix.png" alt="Logo de netflix">
+    </section>
+    <section class="main_container-header_buttons">
+      <div class="container_select">
+        <img src="../../../assets/img/proyecto04/language-square-stroke-rounded.svg" alt="">
+        <select aria-label="selecciona idioma">
+          <option lang="es" label="Español" value="es-CL">Español</option>
+          <option lang="en" label="English" value="en-CL">English</option>
+        </select>
+      </div>
+      <button>Iniciar sesión</button>
+    </section>
+  </article>
+  <article class="main_container-cards">
+
+    <section class="main_container-cards_card">
+      <article class="main_container-cards_card-background">
+        <div class="container_image">
+          <img src="../../../assets/img/proyecto04/foto_hero.jpg" alt="">
+        </div>
+        <div class="background-black"></div>
+        <div class="background-black"></div>
+      </article>
+
+      <article class="main_container-cards_card-title">
+        <h1>Películas y series ilimitadas y mucho más</h1>
+        <p>Disfruta donde quieras. Cancela cuando quieras.</p>
+        <form class="form-email" action="#">
+          <h2 class="form-email_title">¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu
+            membresía de Netflix.</h2>
+            
+          <div class="form-email_container-input">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+          </div>
+          <button class="form-email_button-form">Comenzar ></button>
+        </form>
+      </article>
+      <div class="separador"></div>
+    </section>
+    <!-- SEGUNDA CARD -->
+    <section class="main_container-cards_card main_container-cards_card--padding-3">
+      <article class="main_container-cards_card-title">
+        <h2>Disfruta en tu TV</h2>
+        <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+        <div class="container-main_img">
+          <div class="container-main_img-content">
+            <img src="../../../assets/img/proyecto04/tv.png" alt="">
+            <div class="container-main_img-content_video">
+              <video autoplay playsinline mute loop>
+                <source src="../../../assets/img/proyecto04/video-tv-0819.m4v" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="separador"></div>
+      </article>
+    </section>
+    <!-- TERCERA CARD -->
+    <section class="main_container-cards_card main_container-cards_card--padding-3">
+      <article class="main_container-cards_card-title">
+        <h2>Descarga tus series para verlas offline</h2>
+        <p>Guarda tu contenido favorito y tendrás siempre algo para ver.</p>
+        <div class="container-main_img">
+          <div class="container-main_img-content">
+            <img src="../../../assets/img/proyecto04/mobile-0819.jpg" alt="">
+            <article class="container-main_img-content_animation">
+              <section class="container-short_portada">
+                <img src="../../../assets/img/proyecto04/boxshot.png" alt="">
+              </section>
+              <section class="description">
+                <p>Stranger Things</p>
+                <p>Descargando...</p>
+              </section>
+              <section class="animation">
+                <!-- animación -->
+              </section>
+            </article>
+          </div>
+        </div>
+        <div class="separador"></div>
+      </article>
+    </section>
+    <!-- CUARTA CARD -->
+    <section class="main_container-cards_card main_container-cards_card--padding-3">
+      <article class="main_container-cards_card-title">
+        <h2>Disfruta donde quieras</h2>
+        <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+        <div class="container-main_img">
+          <div class="container-main_img-content">
+            <img src="../../../assets/img/proyecto04/device-pile.png" alt="">
+            <div class="container-main_img-content_video container-main_img-content_video--short">
+              <video autoplay playsinline mute loop>
+                <source src="../../../assets/img/proyecto04/video-devices.m4v" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="separador"></div>
+      </article>
+    </section>
+    <!-- QUINTA CARD -->
+    <section class="main_container-cards_card main_container-cards_card--padding-3">
+      <article class="main_container-cards_card-title">
+        <h2>Crea perfiles para niños</h2>
+        <p>Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos,
+          sin costo con tu membresía.</p>
+        <div class="container-main_img container-main_img--margin-top-1-5">
+          <div class="container-main_img-content">
+            <img src="../../../assets/img/proyecto04/imgchildren.png" alt="">
+          </div>
+        </div>
+        <div class="separador"></div>
+      </article>
+    </section>
+    <!-- Cards información -->
+    <section class="main_container-cards_card main_container-cards_info min-hight-none">
+      <article class="container_button-main">
+        <h2 class="container_button-main_title">Preguntas frecuentes</h2>
+        <div class="container_ul">
+          <ul *ngFor="let item of listInfo; let i = index">
+            <li>
+              <h3 (click)="activarButtonInfo(i)" class="container_button-description">
+                <button class="container_button-description_button">
+                  <p>{{item.title}}</p>
+                  <img *ngIf="buttonInfo === i" class="icon_close"
+                    src="https://cdn.hugeicons.com/icons/multiplication-sign-stroke-rounded.svg" fill="nonte"
+                    viewbox="0 0 36 36" alt="" width="28" height="28" />
+                  <img *ngIf="buttonInfo !== i" class="icon_plus"
+                    src="https://cdn.hugeicons.com/icons/add-01-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36"
+                    alt="" width="28" height="28" />
+                </button>
+              </h3>
+              <section
+                [ngClass]="buttonInfo !== i ? 'container_button-description_content': 'container_button-description_content-open'">
+                <p>{{item.description}}<br /><br />{{item.description2}}</p>
+              </section>
+            </li>
+          </ul>
+
+          <article class="main_container-cards_card-title">
+            <form class="form-email" action="#">
+              <h3 class="form-email_title">¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar
+                tu membresía de Netflix.</h3>
+              <div>
+                <div class="form-email_container-input">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email">
+                </div>
+                <button class="form-email_button-form">Comenzar ></button>
+              </div>
+            </form>
+          </article>
+
+        </div>
+
+        <div class="separador"></div>
+      </article>
+    </section>
+  </article>
+  <article class="main_container-footer">
+    <section class="main_container-footer_wrap">
+        <div class="main_container-footer_wrap-content">
+            <article>
+                <div class="container_number">
+                    <p >¿Preguntas? Llama al </p>
+                    <a class="text-underline" href="#">800 914 143</a>
+                </div>
+            </article>
+            <article class="container_ul">
+                <ul>
+                    <li *ngFor="let item of listFooter">
+                        <p class="text-underline">
+                            {{item.val}}
+                        </p>    
+                    </li>
+                </ul>
+            </article>
+          
                 <div class="container_select">
                     <img src="../../../assets/img/proyecto04/language-square-stroke-rounded.svg" alt="">
-                    <select>
-                        <option lang="es" label="Español" value="es-CL">Español</option>
-                        <option lang="en" label="English" value="en-CL">English</option>
+                    <select aria-label="selecciona idioma">
+                      <option lang="es" label="Español" value="es-CL">Español</option>
+                      <option lang="en" label="English" value="en-CL">English</option>
                     </select>
                 </div>
-                <button>Iniciar sesión</button>
-            </section>
-        </article>
-    <article class="main_container-cards">
 
-        <section class="main_container-cards_card">
-                <article class="main_container-cards_card-background">
-                    <div class="container_image">
-                        <img src="../../../assets/img/proyecto04/foto_hero.jpg" alt="">
-                    </div>
-                    <div class="background-black"></div>
-                    <div class="background-black"></div>
-                </article>   
-
-            <article class="main_container-cards_card-title">
-                <h1>Películas y series ilimitadas y mucho más</h1>
-                <p>Disfruta donde quieras. Cancela cuando quieras.</p>
-                <form action="#">
-                    <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</h3>
-                    <div class="container_input">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <button>Comenzar ></button>
-                </form>
-            </article>
-            <div class="separador"></div>
-        </section>
-        <!-- SEGUNDA CARD -->
-        <section class="main_container-cards_card main_container-cards_card--padding-3">
-            <article class="main_container-cards_card-title">
-                <h2>Disfruta en tu TV</h2>
-                <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
-                <div class="container-main_img">
-                    <div class="container-main_img-content">
-                        <img src="../../../assets/img/proyecto04/tv.png" alt="">
-                        <div class="container-main_img-content_video">
-                            <video autoplay playsinline mute loop>
-                                <source src="../../../assets/img/proyecto04/video-tv-0819.m4v" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="separador"></div>
-            </article>
-        </section>
-        <!-- TERCERA CARD -->
-        <section class="main_container-cards_card main_container-cards_card--padding-3">
-            <article class="main_container-cards_card-title">
-                <h2>Descarga tus series para verlas offline</h2>
-                <p>Guarda tu contenido favorito y tendrás siempre algo para ver.</p>
-                <div class="container-main_img">
-                    <div class="container-main_img-content">
-                        <img src="../../../assets/img/proyecto04/mobile-0819.jpg" alt="">
-                        <article class="container-main_img-content_animation">
-                            <section class="container-short_portada">
-                                <img src="../../../assets/img/proyecto04/boxshot.png" alt="">
-                            </section>
-                            <section class="description">
-                                <p>Stranger Things</p>
-                                <p>Descargando...</p>
-                            </section>
-                            <section class="animation">
-                                <!-- animación -->
-                            </section>
-                        </article>
-                    </div>
-                </div>
-                <div class="separador"></div>
-            </article>
-        </section>
-        <!-- CUARTA CARD -->
-        <section class="main_container-cards_card main_container-cards_card--padding-3">
-            <article class="main_container-cards_card-title">
-                <h2>Disfruta donde quieras</h2>
-                <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
-                <div class="container-main_img">
-                    <div class="container-main_img-content">
-                        <img src="../../../assets/img/proyecto04/device-pile.png" alt="">
-                        <div class="container-main_img-content_video container-main_img-content_video--short">
-                            <video autoplay playsinline mute loop>
-                                <source src="../../../assets/img/proyecto04/video-devices.m4v" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="separador"></div>
-            </article>
-        </section>
-        <!-- QUINTA CARD -->
-        <section class="main_container-cards_card main_container-cards_card--padding-3">
-            <article class="main_container-cards_card-title">
-                <h2>Crea perfiles para niños</h2>
-                <p>Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, sin costo con tu membresía.</p>
-                <div class="container-main_img container-main_img--margin-top-1-5">
-                    <div class="container-main_img-content">
-                        <img src="../../../assets/img/proyecto04/imgchildren.png" alt="">
-                    </div>
-                </div>
-                <div class="separador"></div>
-            </article>
-        </section>
-        <!-- Cards información -->
-        <section class="main_container-cards_card main_container-cards_info min-hight-none">
-            <article class="container_button-main">
-                <h2 class="container_button-main_title">Preguntas frecuentes</h2>
-                <div class="container_ul">
-                    <ul *ngFor="let item of listInfo; let i = index">
-                        <li>
-                            <h3 (click)="activarButtonInfo(i)" class="container_button-description">
-                                <button class="container_button-description_button">
-                                    <p>{{item.title}}</p>
-                                    <img *ngIf="buttonInfo !== i" class="icon_close" src="https://cdn.hugeicons.com/icons/multiplication-sign-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36" alt="" width="28" height="28" />
-                                    <img *ngIf="buttonInfo === i" class="icon_plus" src="https://cdn.hugeicons.com/icons/add-01-stroke-rounded.svg" fill="nonte" viewbox="0 0 36 36" alt="" width="28" height="28" />
-                                </button>
-                            </h3>
-                            <section [ngClass]="buttonInfo !== i ? 'container_button-description_content': 'container_button-description_content-open'">
-                                <p>{{item.description}}<br/><br/>{{item.description2}}</p>
-                            </section>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="separador"></div>
-            </article>
-        </section>
-    </article>
-    <article class="main_container-footer">
-        <p>clon de Netflix por Bastian Ulrich</p>
-    </article>
+            </div>
+            <p style="margin: 16px 0;">Clon de Netflix por Bastian Ulrich</p>
+    </section>
+  </article>
 </section>

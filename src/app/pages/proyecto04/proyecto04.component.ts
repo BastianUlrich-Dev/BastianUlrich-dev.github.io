@@ -40,6 +40,25 @@ export class Proyecto04Component {
 
     }
   ];
+
+  listFooter= [
+    {val:"Preguntas frecuentes"},
+    {val: "Centro de ayuda"},
+    {val: "Cuenta"},
+    {val: "Prensa"},
+    {val: "Relaciones con inversionistas"},
+    {val: "Empleo"},
+    {val: "Canjear tarjetas de regalo"},
+    {val: "Formas de ver"},
+    {val: "Términos de uso"},
+    {val: "Privacidad"},
+    {val: "Preferencias de cookies"},
+    {val: "Información corporativa"},
+    {val: "Contáctanos"},
+    {val: "Prueba de velocidad"},
+    {val: "Avisos legales"},
+    {val: "Solo en Netflix"},
+  ];
   
 
   activarButtonInfo(index:number){
