@@ -40,6 +40,13 @@ p{
         }
     }
 }
+.content-form{
+    margin-top: 1.5rem;
+    @media (width>600px) {
+        display: flex;
+        max-height: 3.5rem;
+    }
+}
 .form-email{
         display: flex;
         flex-direction: column;
@@ -59,7 +66,7 @@ p{
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-top: 1.5rem;
+            // margin-top: 1.5rem;
             line-height: 1.5;
             font-size: 1rem;
             background-color: rgba(0, 0, 0, 0.5098039216);
@@ -100,11 +107,17 @@ p{
         max-width: 146px;
         margin: 0 auto;
         margin-top: 1rem;
-
+        @media (width > 600px) {
+            flex: 0 0 auto;
+            margin-top: 0;
+            margin-left: 0.5rem;
+            font-size: 1.5rem;
+            min-width: 186px;
+        }
     }
-    @media (width> 600px) {
-        padding: 0 2rem;
-        
+    @media (width > 600px) {
+        // padding: 0 2rem;
+        padding: 0;
     }
 }
 
@@ -124,6 +137,9 @@ p{
             width: 100px;
             img{
                 width: 100%;
+            }
+            @media (width>960px) {
+                
             }
         }
         &_buttons{
@@ -298,6 +314,13 @@ p{
                                 max-width: 34px;
                                 img{
                                     height: 3rem;
+                                    width: 100%;
+                                    @media (width>600px) {
+                                        height: 4rem; 
+                                    }
+                                    @media (width>960px) {
+                                        height: 4.5rem;
+                                    }
                                 }
                             }
                             .description{
@@ -340,6 +363,12 @@ p{
                                 -webkit-flex-shrink: 0;
                                 -ms-flex-negative: 0;
                                 flex-shrink: 0;
+                            }
+                            @media (width>600px) {
+                                padding: 0.35rem 0.75rem;
+                            }
+                            @media (width>960px) {
+                                padding: 0.5rem 0.75rem;
                             }
                         }
                     }
