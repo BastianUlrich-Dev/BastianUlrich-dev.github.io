@@ -13,8 +13,11 @@
     &_card{
         padding: 24px;
         width: 100%;
+        min-height: 173px;
+        height: 100%;
         @media (width > 480px) {
             width: 45%;
+            height: initial;
         }
         &__title{
             color: $color-font;
@@ -47,7 +50,10 @@
         background-color: $color-green;
     }
     &_card:last-child{
-        padding: 0;
+        display: none;
+        @media (width > 530px) {
+            display: initial;
+        }
     }
 
     @media (width > 480px){

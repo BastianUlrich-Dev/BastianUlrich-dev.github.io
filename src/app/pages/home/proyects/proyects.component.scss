@@ -73,6 +73,9 @@
 
     &_card:last-child{
         display: none;
+        @media (width > 530px) {
+            display: initial;
+        }
         .backgroundImg{
             display: none;
         }
