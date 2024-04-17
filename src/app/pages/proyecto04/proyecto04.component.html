@@ -44,9 +44,11 @@
     </section>
     <!-- SEGUNDA CARD -->
     <section class="main_container-cards_card main_container-cards_card--padding-3">
-      <article class="main_container-cards_card-title">
-        <h2>Disfruta en tu TV</h2>
-        <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+      <article class="main_container-cards_card-title main_container-cards_card-title--direction-column">
+        <div class="container-title">
+          <h2>Disfruta en tu TV</h2>
+          <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+        </div>
         <div class="container-main_img">
           <div class="container-main_img-content">
             <img src="../../../assets/img/proyecto04/tv.png" alt="">
@@ -57,14 +59,16 @@
             </div>
           </div>
         </div>
-        <div class="separador"></div>
       </article>
+      <div class="separador"></div>
     </section>
     <!-- TERCERA CARD -->
     <section class="main_container-cards_card main_container-cards_card--padding-3">
-      <article class="main_container-cards_card-title">
-        <h2>Descarga tus series para verlas offline</h2>
-        <p>Guarda tu contenido favorito y tendrás siempre algo para ver.</p>
+      <article class="main_container-cards_card-title main_container-cards_card-title--row-reverse">
+        <div class="container-title">
+          <h2>Descarga tus series para verlas offline</h2>
+          <p>Guarda tu contenido favorito y tendrás siempre algo para ver.</p>
+        </div>
         <div class="container-main_img">
           <div class="container-main_img-content">
             <img src="../../../assets/img/proyecto04/mobile-0819.jpg" alt="">
@@ -82,14 +86,16 @@
             </article>
           </div>
         </div>
-        <div class="separador"></div>
       </article>
+      <div class="separador"></div>
     </section>
     <!-- CUARTA CARD -->
     <section class="main_container-cards_card main_container-cards_card--padding-3">
-      <article class="main_container-cards_card-title">
-        <h2>Disfruta donde quieras</h2>
-        <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+      <article class="main_container-cards_card-title main_container-cards_card-title--direction-column">
+        <div class="container-title">
+          <h2>Disfruta donde quieras</h2>
+          <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+        </div>
         <div class="container-main_img">
           <div class="container-main_img-content">
             <img src="../../../assets/img/proyecto04/device-pile.png" alt="">
@@ -100,22 +106,24 @@
             </div>
           </div>
         </div>
-        <div class="separador"></div>
       </article>
+      <div class="separador"></div>
     </section>
     <!-- QUINTA CARD -->
     <section class="main_container-cards_card main_container-cards_card--padding-3">
-      <article class="main_container-cards_card-title">
-        <h2>Crea perfiles para niños</h2>
-        <p>Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos,
-          sin costo con tu membresía.</p>
+      <article class="main_container-cards_card-title main_container-cards_card-title--row-reverse">
+        <div class="container-title">
+          <h2>Crea perfiles para niños</h2>
+          <p>Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos,
+            sin costo con tu membresía.</p>
+        </div>
         <div class="container-main_img container-main_img--margin-top-1-5">
           <div class="container-main_img-content">
             <img src="../../../assets/img/proyecto04/imgchildren.png" alt="">
           </div>
         </div>
-        <div class="separador"></div>
       </article>
+      <div class="separador"></div>
     </section>
     <!-- Cards información -->
     <section class="main_container-cards_card main_container-cards_info min-hight-none">
@@ -147,11 +155,13 @@
               <h3 class="form-email_title">¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar
                 tu membresía de Netflix.</h3>
               <div>
-                <div class="form-email_container-input">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" id="email">
-                </div>
-                <button class="form-email_button-form">Comenzar ></button>
+                <section class="content-form">
+                  <div class="form-email_container-input">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                  </div>
+                  <button class="form-email_button-form">Comenzar ></button>
+                </section>
               </div>
             </form>
           </article>
@@ -171,7 +181,7 @@
                     <a class="text-underline" href="#">800 914 143</a>
                 </div>
             </article>
-            <article class="container_ul">
+            <article class="container_ul-footer">
                 <ul>
                     <li *ngFor="let item of listFooter">
                         <p class="text-underline">
