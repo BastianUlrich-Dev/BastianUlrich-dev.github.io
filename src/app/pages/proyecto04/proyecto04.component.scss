@@ -28,6 +28,7 @@ p{
     display: flex;
     align-items: center;
     padding: 8px;
+    max-width: 114px;
     img{
         filter: invert(1);
     }
@@ -66,7 +67,6 @@ p{
             display: flex;
             flex-direction: row;
             align-items: center;
-            // margin-top: 1.5rem;
             line-height: 1.5;
             font-size: 1rem;
             background-color: rgba(0, 0, 0, 0.5098039216);
@@ -515,10 +515,6 @@ p{
             display: inherit;
             height: auto;
             &-content{
-                display: -webkit-inline-box;
-                display: -webkit-inline-flex;
-                display: -ms-inline-flexbox;
-                display: inline-flex;
                 -webkit-box-flex-wrap: wrap;
                 -webkit-flex-wrap: wrap;
                 -ms-flex-wrap: wrap;
