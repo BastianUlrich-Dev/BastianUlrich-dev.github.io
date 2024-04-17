@@ -65,23 +65,26 @@
 
     &_card:nth-child(2) {
         background-color: $color-blue;
-        // .main_proyects__container_card__link{
-        //     display: none;
-        // }
     }
 
     &_card:nth-child(3) {
         background-color: $color-subtitle;
-        // .main_proyects__container_card__link{
-        //     display: none;
-        // }
     }
 
-    &_card:nth-child(4) {
-        background-color: $color-secondary;
+    // &_card:nth-child(4) {
+    //     background-color: $color-secondary;
+    //     .main_proyects__container_card__link{
+    //         display: none;
+    //     }
+    // }
+    &_card:last-child{
+        .backgroundImg{
+            display: none;
+        }
         .main_proyects__container_card__link{
             display: none;
         }
+        padding: 0;
     }
 
     @media (width > 480px) {

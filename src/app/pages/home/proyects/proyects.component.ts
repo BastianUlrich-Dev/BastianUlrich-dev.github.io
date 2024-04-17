@@ -31,19 +31,19 @@ export class ProyectsComponent {
       description: "",
       ruta: "/proyecto03"
     },
-    // {
-    //   img: "../../../../assets/img/patron2.png",
-    //   title: "Proyecto CRUD",
-    //   subtitle: "(En progreso)",
-    //   description: "",
-    //   ruta: "/proyecto02"
-    // },
-    // {
-    //   img: "../../../../assets/img/patron4.png",
-    //   title: "Proyecto 04",
-    //   subtitle: "(En progreso)",
-    //   description: "",
-    //   ruta: "/proyecto04"
-    // }
+    {
+      img: "../../../../assets/img/pantallazo-clon-netflix.png",
+      title: "Proyecto clon Netflix",
+      subtitle: "Clon de pantalla principal.",
+      description: "",
+      ruta: "/proyecto04"
+    },
+    {
+      img: "",
+      title: "",
+      subtitle: "",
+      description: "",
+      ruta: ""
+    }
   ];
 }
