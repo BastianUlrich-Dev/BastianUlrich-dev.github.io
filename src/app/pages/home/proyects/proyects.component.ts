@@ -27,7 +27,7 @@ export class ProyectsComponent {
     {
       img: "../../../../assets/img/proyect03/proyecto03pantallazo.png",
       title: "Proyecto weather",
-      subtitle: "Busca la temperatura actual de la ciudad que elijas, en tiempo real.",
+      subtitle: "Busca la temperatura actual de la ciudad que elijas mediante una API, en tiempo real.",
       description: "",
       ruta: "/proyecto03"
     },
