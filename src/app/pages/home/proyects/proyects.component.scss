@@ -41,6 +41,18 @@
             filter: grayscale(1);
         }
         &__link{
+            font-family: monospace;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid white;
+            background-color: transparent;
+            padding: 10px;
+        }
+        &__link--a{
+            text-align: center;
+            display: none;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -61,6 +73,12 @@
 
     &_card:nth-child(1) {
         background-color: $color-highlight;
+        .main_proyects__container_card__link{
+            display: none;
+        }
+        .main_proyects__container_card__link--a{
+            display: initial;
+        }
     }
 
     &_card:nth-child(2) {

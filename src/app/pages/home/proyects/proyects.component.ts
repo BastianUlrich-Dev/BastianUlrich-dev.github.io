@@ -18,11 +18,11 @@ export class ProyectsComponent {
   }
   proyectsObj = [
     {
-      img: "../../../../assets/img/captura-proyect-01.png",
-      title: "Proyecto basico de calculadora",
-      subtitle: "",
-      description: "Calculadora de edad responsivo con formulario reactivo.",
-      ruta: "/proyecto01"
+      img: "../../../../assets/img/proyectoRoom.png",
+      title: "Proyecto landing page para Room Studios",
+      subtitle: "Proyecto real de estudio de producción musical. html, css, js y php",
+      description: "",
+      ruta: "https://www.roomstudios.cl/"
     },
     {
       img: "../../../../assets/img/proyect03/proyecto03pantallazo.png",
